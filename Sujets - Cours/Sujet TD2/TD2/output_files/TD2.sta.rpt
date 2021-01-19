@@ -1,0 +1,1552 @@
+TimeQuest Timing Analyzer report for TD2
+Tue Jan 19 10:41:39 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Ex5:inst4|Ex1:c4|Q'
+ 12. Slow Model Setup: 'Ex5:inst|Ex1:c4|Q'
+ 13. Slow Model Setup: 'Ex5:inst1|Ex1:c4|Q'
+ 14. Slow Model Setup: 'E'
+ 15. Slow Model Setup: 'Ex5:inst2|Ex1:c4|Q'
+ 16. Slow Model Setup: 'Ex5:inst3|Ex1:c4|Q'
+ 17. Slow Model Setup: 'Ex5:inst5|Ex1:c4|Q'
+ 18. Slow Model Setup: 'Ex5:inst6|Ex1:c4|Q'
+ 19. Slow Model Hold: 'E'
+ 20. Slow Model Hold: 'Ex5:inst3|Ex1:c4|Q'
+ 21. Slow Model Hold: 'Ex5:inst1|Ex1:c4|Q'
+ 22. Slow Model Hold: 'Ex5:inst4|Ex1:c4|Q'
+ 23. Slow Model Hold: 'Ex5:inst|Ex1:c4|Q'
+ 24. Slow Model Hold: 'Ex5:inst2|Ex1:c4|Q'
+ 25. Slow Model Hold: 'Ex5:inst5|Ex1:c4|Q'
+ 26. Slow Model Hold: 'Ex5:inst6|Ex1:c4|Q'
+ 27. Slow Model Minimum Pulse Width: 'E'
+ 28. Slow Model Minimum Pulse Width: 'Ex5:inst1|Ex1:c4|Q'
+ 29. Slow Model Minimum Pulse Width: 'Ex5:inst2|Ex1:c4|Q'
+ 30. Slow Model Minimum Pulse Width: 'Ex5:inst3|Ex1:c4|Q'
+ 31. Slow Model Minimum Pulse Width: 'Ex5:inst4|Ex1:c4|Q'
+ 32. Slow Model Minimum Pulse Width: 'Ex5:inst5|Ex1:c4|Q'
+ 33. Slow Model Minimum Pulse Width: 'Ex5:inst|Ex1:c4|Q'
+ 34. Slow Model Minimum Pulse Width: 'Ex5:inst6|Ex1:c4|Q'
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Fast Model Setup Summary
+ 38. Fast Model Hold Summary
+ 39. Fast Model Recovery Summary
+ 40. Fast Model Removal Summary
+ 41. Fast Model Minimum Pulse Width Summary
+ 42. Fast Model Setup: 'Ex5:inst4|Ex1:c4|Q'
+ 43. Fast Model Setup: 'Ex5:inst|Ex1:c4|Q'
+ 44. Fast Model Setup: 'Ex5:inst1|Ex1:c4|Q'
+ 45. Fast Model Setup: 'E'
+ 46. Fast Model Setup: 'Ex5:inst2|Ex1:c4|Q'
+ 47. Fast Model Setup: 'Ex5:inst3|Ex1:c4|Q'
+ 48. Fast Model Setup: 'Ex5:inst5|Ex1:c4|Q'
+ 49. Fast Model Setup: 'Ex5:inst6|Ex1:c4|Q'
+ 50. Fast Model Hold: 'E'
+ 51. Fast Model Hold: 'Ex5:inst3|Ex1:c4|Q'
+ 52. Fast Model Hold: 'Ex5:inst1|Ex1:c4|Q'
+ 53. Fast Model Hold: 'Ex5:inst4|Ex1:c4|Q'
+ 54. Fast Model Hold: 'Ex5:inst|Ex1:c4|Q'
+ 55. Fast Model Hold: 'Ex5:inst2|Ex1:c4|Q'
+ 56. Fast Model Hold: 'Ex5:inst5|Ex1:c4|Q'
+ 57. Fast Model Hold: 'Ex5:inst6|Ex1:c4|Q'
+ 58. Fast Model Minimum Pulse Width: 'E'
+ 59. Fast Model Minimum Pulse Width: 'Ex5:inst1|Ex1:c4|Q'
+ 60. Fast Model Minimum Pulse Width: 'Ex5:inst2|Ex1:c4|Q'
+ 61. Fast Model Minimum Pulse Width: 'Ex5:inst3|Ex1:c4|Q'
+ 62. Fast Model Minimum Pulse Width: 'Ex5:inst4|Ex1:c4|Q'
+ 63. Fast Model Minimum Pulse Width: 'Ex5:inst5|Ex1:c4|Q'
+ 64. Fast Model Minimum Pulse Width: 'Ex5:inst|Ex1:c4|Q'
+ 65. Fast Model Minimum Pulse Width: 'Ex5:inst6|Ex1:c4|Q'
+ 66. Clock to Output Times
+ 67. Minimum Clock to Output Times
+ 68. Multicorner Timing Analysis Summary
+ 69. Clock to Output Times
+ 70. Minimum Clock to Output Times
+ 71. Setup Transfers
+ 72. Hold Transfers
+ 73. Report TCCS
+ 74. Report RSKM
+ 75. Unconstrained Paths
+ 76. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; TD2                                                ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                 ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; Clock Name         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; E                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { E }                  ;
+; Ex5:inst1|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst1|Ex1:c4|Q } ;
+; Ex5:inst2|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst2|Ex1:c4|Q } ;
+; Ex5:inst3|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst3|Ex1:c4|Q } ;
+; Ex5:inst4|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst4|Ex1:c4|Q } ;
+; Ex5:inst5|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst5|Ex1:c4|Q } ;
+; Ex5:inst6|Ex1:c4|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst6|Ex1:c4|Q } ;
+; Ex5:inst|Ex1:c4|Q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Ex5:inst|Ex1:c4|Q }  ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                           ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                          ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+; 834.72 MHz ; 450.05 MHz      ; Ex5:inst4|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
+; 893.66 MHz ; 450.05 MHz      ; Ex5:inst|Ex1:c4|Q  ; limit due to high minimum pulse width violation (tch)         ;
+; 911.58 MHz ; 450.05 MHz      ; Ex5:inst1|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
+; 956.02 MHz ; 380.08 MHz      ; E                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 956.02 MHz ; 450.05 MHz      ; Ex5:inst2|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
+; 956.02 MHz ; 450.05 MHz      ; Ex5:inst3|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
+; 956.02 MHz ; 450.05 MHz      ; Ex5:inst5|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
+; 956.94 MHz ; 450.05 MHz      ; Ex5:inst6|Ex1:c4|Q ; limit due to high minimum pulse width violation (tch)         ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------+
+; Slow Model Setup Summary                    ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; Ex5:inst4|Ex1:c4|Q ; -0.198 ; -0.198        ;
+; Ex5:inst|Ex1:c4|Q  ; -0.119 ; -0.137        ;
+; Ex5:inst1|Ex1:c4|Q ; -0.097 ; -0.115        ;
+; E                  ; -0.046 ; -0.064        ;
+; Ex5:inst2|Ex1:c4|Q ; -0.046 ; -0.064        ;
+; Ex5:inst3|Ex1:c4|Q ; -0.046 ; -0.064        ;
+; Ex5:inst5|Ex1:c4|Q ; -0.046 ; -0.064        ;
+; Ex5:inst6|Ex1:c4|Q ; -0.045 ; -0.064        ;
++--------------------+--------+---------------+
+
+
++---------------------------------------------+
+; Slow Model Hold Summary                     ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; E                  ; -2.695 ; -2.695        ;
+; Ex5:inst3|Ex1:c4|Q ; -2.327 ; -2.327        ;
+; Ex5:inst1|Ex1:c4|Q ; -2.286 ; -2.286        ;
+; Ex5:inst4|Ex1:c4|Q ; -2.269 ; -2.269        ;
+; Ex5:inst|Ex1:c4|Q  ; -2.268 ; -2.268        ;
+; Ex5:inst2|Ex1:c4|Q ; -2.142 ; -2.142        ;
+; Ex5:inst5|Ex1:c4|Q ; -2.076 ; -2.076        ;
+; Ex5:inst6|Ex1:c4|Q ; 0.445  ; 0.000         ;
++--------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------+
+; Slow Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; E                  ; -1.631 ; -6.519        ;
+; Ex5:inst1|Ex1:c4|Q ; -0.611 ; -4.888        ;
+; Ex5:inst2|Ex1:c4|Q ; -0.611 ; -4.888        ;
+; Ex5:inst3|Ex1:c4|Q ; -0.611 ; -4.888        ;
+; Ex5:inst4|Ex1:c4|Q ; -0.611 ; -4.888        ;
+; Ex5:inst5|Ex1:c4|Q ; -0.611 ; -4.888        ;
+; Ex5:inst|Ex1:c4|Q  ; -0.611 ; -4.888        ;
+; Ex5:inst6|Ex1:c4|Q ; -0.611 ; -3.666        ;
++--------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst4|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.198 ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.236      ;
+; 0.116  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.922      ;
+; 0.118  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.920      ;
+; 0.120  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.918      ;
+; 0.121  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.917      ;
+; 0.307  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.521  ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.500        ; 2.437      ; 0.731      ;
+; 3.021  ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 2.437      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; -0.119 ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.157      ;
+; -0.018 ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.056      ;
+; 0.127  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.911      ;
+; 0.127  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.911      ;
+; 0.130  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.520  ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 0.500        ; 2.436      ; 0.731      ;
+; 3.020  ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 2.436      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst1|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.097 ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.135      ;
+; -0.018 ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.056      ;
+; 0.127  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.911      ;
+; 0.128  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.910      ;
+; 0.130  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.538  ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.500        ; 2.454      ; 0.731      ;
+; 3.038  ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 2.454      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'E'                                                                                                     ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; -0.046 ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 1.000        ; 0.000      ; 1.084      ;
+; -0.018 ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 1.000        ; 0.000      ; 1.056      ;
+; 0.126  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.912      ;
+; 0.128  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.910      ;
+; 0.130  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.731      ;
+; 2.947  ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 0.500        ; 2.863      ; 0.731      ;
+; 3.447  ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 1.000        ; 2.863      ; 0.731      ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst2|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.046 ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.084      ;
+; -0.018 ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.056      ;
+; 0.126  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.912      ;
+; 0.128  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.910      ;
+; 0.130  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.394  ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.500        ; 2.310      ; 0.731      ;
+; 2.894  ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 2.310      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst3|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.046 ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.084      ;
+; -0.018 ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.056      ;
+; 0.126  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.912      ;
+; 0.128  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.910      ;
+; 0.130  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.579  ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.500        ; 2.495      ; 0.731      ;
+; 3.079  ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 2.495      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst5|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.046 ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.084      ;
+; -0.018 ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.056      ;
+; 0.126  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.912      ;
+; 0.128  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.910      ;
+; 0.130  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.908      ;
+; 0.307  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 2.328  ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.500        ; 2.244      ; 0.731      ;
+; 2.828  ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 2.244      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Ex5:inst6|Ex1:c4|Q'                                                                                              ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.045 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.083      ;
+; -0.019 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 1.057      ;
+; 0.131  ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.907      ;
+; 0.139  ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.899      ;
+; 0.307  ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
+; 0.307  ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.731      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'E'                                                                                                      ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; -2.695 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 0.000        ; 2.863      ; 0.731      ;
+; -2.195 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; -0.500       ; 2.863      ; 0.731      ;
+; 0.445  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.908      ;
+; 0.624  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.910      ;
+; 0.626  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.912      ;
+; 0.770  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 0.000        ; 0.000      ; 1.056      ;
+; 0.798  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 0.000        ; 0.000      ; 1.084      ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst3|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -2.327 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 2.495      ; 0.731      ;
+; -1.827 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; -0.500       ; 2.495      ; 0.731      ;
+; 0.445  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.908      ;
+; 0.624  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.910      ;
+; 0.626  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.912      ;
+; 0.770  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.056      ;
+; 0.798  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.084      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst1|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -2.286 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 2.454      ; 0.731      ;
+; -1.786 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; -0.500       ; 2.454      ; 0.731      ;
+; 0.445  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.908      ;
+; 0.624  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.910      ;
+; 0.625  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.911      ;
+; 0.770  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.056      ;
+; 0.849  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.135      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst4|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -2.269 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 2.437      ; 0.731      ;
+; -1.769 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; -0.500       ; 2.437      ; 0.731      ;
+; 0.445  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.631  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.917      ;
+; 0.632  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.918      ;
+; 0.634  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.920      ;
+; 0.636  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.922      ;
+; 0.950  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.236      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; -2.268 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 2.436      ; 0.731      ;
+; -1.768 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; -0.500       ; 2.436      ; 0.731      ;
+; 0.445  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.908      ;
+; 0.625  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.911      ;
+; 0.625  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.911      ;
+; 0.770  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.056      ;
+; 0.871  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.157      ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst2|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -2.142 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 2.310      ; 0.731      ;
+; -1.642 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; -0.500       ; 2.310      ; 0.731      ;
+; 0.445  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.908      ;
+; 0.624  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.910      ;
+; 0.626  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.912      ;
+; 0.770  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.056      ;
+; 0.798  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.084      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst5|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -2.076 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 2.244      ; 0.731      ;
+; -1.576 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; -0.500       ; 2.244      ; 0.731      ;
+; 0.445  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.622  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.908      ;
+; 0.624  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.910      ;
+; 0.626  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.912      ;
+; 0.770  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.056      ;
+; 0.798  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.084      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Ex5:inst6|Ex1:c4|Q'                                                                                              ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.445 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.731      ;
+; 0.613 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.899      ;
+; 0.621 ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.907      ;
+; 0.771 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.057      ;
+; 0.797 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 1.083      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'E'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; E     ; Rise       ; E                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c1|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c1|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c2|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c2|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c3|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c3|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c4|Q  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c4|Q  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c1|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c1|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c2|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c2|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c3|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c3|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c4|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c4|Q|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst1|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c4|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst2|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c4|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst3|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c4|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst4|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c4|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst5|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c4|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst|Ex1:c4|Q'                                                                     ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock             ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c1|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c1|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c2|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c2|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c3|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c3|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c4|Q         ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c4|Q         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c1|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c1|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c2|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c2|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c3|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c3|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c4|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c4|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Ex5:inst6|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c1|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c2|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c3|Q          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c3|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c3|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 6.236 ; 6.236 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 6.236 ; 6.236 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++--------------------------------------------+
+; Fast Model Setup Summary                   ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; Ex5:inst4|Ex1:c4|Q ; 0.510 ; 0.000         ;
+; Ex5:inst|Ex1:c4|Q  ; 0.548 ; 0.000         ;
+; Ex5:inst1|Ex1:c4|Q ; 0.561 ; 0.000         ;
+; E                  ; 0.565 ; 0.000         ;
+; Ex5:inst2|Ex1:c4|Q ; 0.565 ; 0.000         ;
+; Ex5:inst3|Ex1:c4|Q ; 0.565 ; 0.000         ;
+; Ex5:inst5|Ex1:c4|Q ; 0.565 ; 0.000         ;
+; Ex5:inst6|Ex1:c4|Q ; 0.565 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++---------------------------------------------+
+; Fast Model Hold Summary                     ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; E                  ; -1.725 ; -1.725        ;
+; Ex5:inst3|Ex1:c4|Q ; -1.466 ; -1.466        ;
+; Ex5:inst1|Ex1:c4|Q ; -1.438 ; -1.438        ;
+; Ex5:inst4|Ex1:c4|Q ; -1.433 ; -1.433        ;
+; Ex5:inst|Ex1:c4|Q  ; -1.433 ; -1.433        ;
+; Ex5:inst2|Ex1:c4|Q ; -1.418 ; -1.418        ;
+; Ex5:inst5|Ex1:c4|Q ; -1.371 ; -1.371        ;
+; Ex5:inst6|Ex1:c4|Q ; 0.215  ; 0.000         ;
++--------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++---------------------------------------------+
+; Fast Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; E                  ; -1.380 ; -5.380        ;
+; Ex5:inst1|Ex1:c4|Q ; -0.500 ; -4.000        ;
+; Ex5:inst2|Ex1:c4|Q ; -0.500 ; -4.000        ;
+; Ex5:inst3|Ex1:c4|Q ; -0.500 ; -4.000        ;
+; Ex5:inst4|Ex1:c4|Q ; -0.500 ; -4.000        ;
+; Ex5:inst5|Ex1:c4|Q ; -0.500 ; -4.000        ;
+; Ex5:inst|Ex1:c4|Q  ; -0.500 ; -4.000        ;
+; Ex5:inst6|Ex1:c4|Q ; -0.500 ; -3.000        ;
++--------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst4|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.510 ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.522      ;
+; 0.630 ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.402      ;
+; 0.632 ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.400      ;
+; 0.633 ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.399      ;
+; 0.634 ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.398      ;
+; 0.665 ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.813 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.500        ; 1.507      ; 0.367      ;
+; 2.313 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1.000        ; 1.507      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; 0.548 ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.484      ;
+; 0.564 ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.468      ;
+; 0.636 ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.396      ;
+; 0.636 ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.396      ;
+; 0.639 ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.813 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 0.500        ; 1.507      ; 0.367      ;
+; 2.313 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 1.000        ; 1.507      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst1|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.561 ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.471      ;
+; 0.565 ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.467      ;
+; 0.637 ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.395      ;
+; 0.637 ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639 ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.818 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.500        ; 1.512      ; 0.367      ;
+; 2.318 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1.000        ; 1.512      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'E'                                                                                                    ;
++-------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; 0.565 ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.467      ;
+; 0.568 ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.464      ;
+; 0.636 ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.396      ;
+; 0.636 ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.396      ;
+; 0.639 ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 1.000        ; 0.000      ; 0.367      ;
+; 2.105 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 0.500        ; 1.799      ; 0.367      ;
+; 2.605 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 1.000        ; 1.799      ; 0.367      ;
++-------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst2|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.565 ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.467      ;
+; 0.568 ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.464      ;
+; 0.636 ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637 ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639 ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.798 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.500        ; 1.492      ; 0.367      ;
+; 2.298 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1.000        ; 1.492      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst3|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.565 ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.467      ;
+; 0.568 ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.464      ;
+; 0.636 ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637 ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639 ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.846 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.500        ; 1.540      ; 0.367      ;
+; 2.346 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1.000        ; 1.540      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst5|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.565 ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.467      ;
+; 0.568 ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.464      ;
+; 0.636 ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.396      ;
+; 0.637 ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.395      ;
+; 0.639 ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 1.751 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.500        ; 1.445      ; 0.367      ;
+; 2.251 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1.000        ; 1.445      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Ex5:inst6|Ex1:c4|Q'                                                                                             ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.565 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.467      ;
+; 0.569 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.463      ;
+; 0.641 ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.391      ;
+; 0.643 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.389      ;
+; 0.665 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 1.000        ; 0.000      ; 0.367      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'E'                                                                                                      ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node         ; To Node           ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+; -1.725 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; 0.000        ; 1.799      ; 0.367      ;
+; -1.225 ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; E           ; -0.500       ; 1.799      ; 0.367      ;
+; 0.215  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst|Ex1:c2|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.393      ;
+; 0.244  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244  ; Ex5:inst|Ex1:c3|Q ; Ex5:inst|Ex1:c1|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.396      ;
+; 0.312  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c2|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.464      ;
+; 0.315  ; Ex5:inst|Ex1:c1|Q ; Ex5:inst|Ex1:c3|Q ; E                 ; E           ; 0.000        ; 0.000      ; 0.467      ;
++--------+-------------------+-------------------+-------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst3|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.466 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 1.540      ; 0.367      ;
+; -0.966 ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; -0.500       ; 1.540      ; 0.367      ;
+; 0.215  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244  ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.396      ;
+; 0.312  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c2|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.464      ;
+; 0.315  ; Ex5:inst4|Ex1:c1|Q ; Ex5:inst4|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.467      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst1|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.438 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 1.512      ; 0.367      ;
+; -0.938 ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; -0.500       ; 1.512      ; 0.367      ;
+; 0.215  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243  ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.395      ;
+; 0.315  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.467      ;
+; 0.319  ; Ex5:inst2|Ex1:c1|Q ; Ex5:inst2|Ex1:c2|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.471      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst4|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.433 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 1.507      ; 0.367      ;
+; -0.933 ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; -0.500       ; 1.507      ; 0.367      ;
+; 0.215  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.246  ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c2|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250  ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.402      ;
+; 0.370  ; Ex5:inst5|Ex1:c1|Q ; Ex5:inst5|Ex1:c3|Q ; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.522      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock       ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+; -1.433 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 1.507      ; 0.367      ;
+; -0.933 ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q ; -0.500       ; 1.507      ; 0.367      ;
+; 0.215  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.393      ;
+; 0.244  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244  ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.396      ;
+; 0.316  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c3|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.468      ;
+; 0.332  ; Ex5:inst1|Ex1:c1|Q ; Ex5:inst1|Ex1:c2|Q ; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.484      ;
++--------+--------------------+--------------------+--------------------+-------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst2|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.418 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 1.492      ; 0.367      ;
+; -0.918 ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; -0.500       ; 1.492      ; 0.367      ;
+; 0.215  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244  ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.396      ;
+; 0.312  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c2|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.464      ;
+; 0.315  ; Ex5:inst3|Ex1:c1|Q ; Ex5:inst3|Ex1:c3|Q ; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.467      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst5|Ex1:c4|Q'                                                                                               ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.371 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 1.445      ; 0.367      ;
+; -0.871 ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; -0.500       ; 1.445      ; 0.367      ;
+; 0.215  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241  ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.393      ;
+; 0.243  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244  ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.396      ;
+; 0.312  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c2|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.464      ;
+; 0.315  ; Ex5:inst6|Ex1:c1|Q ; Ex5:inst6|Ex1:c3|Q ; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.467      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Ex5:inst6|Ex1:c4|Q'                                                                                              ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.215 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.389      ;
+; 0.239 ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.391      ;
+; 0.311 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c2|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.463      ;
+; 0.315 ; Ex5:inst7|Ex1:c1|Q ; Ex5:inst7|Ex1:c3|Q ; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 0.000        ; 0.000      ; 0.467      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'E'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; E     ; Rise       ; E                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c1|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c1|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c2|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c2|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c3|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c3|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; E     ; Rise       ; Ex5:inst|Ex1:c4|Q  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; E     ; Rise       ; Ex5:inst|Ex1:c4|Q  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; E~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; E~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c1|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c1|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c2|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c2|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c3|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c3|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; E     ; Rise       ; inst|c4|Q|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; E     ; Rise       ; inst|c4|Q|clk      ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst1|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c4|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; Ex5:inst2|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst1|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst1|Ex1:c4|Q ; Rise       ; inst2|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst2|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c4|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; Ex5:inst3|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst2|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst2|Ex1:c4|Q ; Rise       ; inst3|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst3|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c4|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; Ex5:inst4|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst3|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst3|Ex1:c4|Q ; Rise       ; inst4|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst4|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c4|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; Ex5:inst5|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst4|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst4|Ex1:c4|Q ; Rise       ; inst5|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst5|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c4|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; Ex5:inst6|Ex1:c4|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst5|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c4|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst5|Ex1:c4|Q ; Rise       ; inst6|c4|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst|Ex1:c4|Q'                                                                     ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock             ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c1|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c1|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c2|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c2|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c3|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c3|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c4|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; Ex5:inst1|Ex1:c4|Q         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c1|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c1|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c2|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c2|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c3|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c3|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c4|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst1|c4|Q|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst|Ex1:c4|Q ; Rise       ; inst|c4|Q~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Ex5:inst6|Ex1:c4|Q'                                                                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c1|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c2|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c3|Q          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; Ex5:inst7|Ex1:c3|Q          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst6|c4|Q~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c1|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c2|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c3|Q|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Ex5:inst6|Ex1:c4|Q ; Rise       ; inst7|c3|Q|clk              ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 3.372 ; 3.372 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 3.372 ; 3.372 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++---------------------+--------+---------+----------+---------+---------------------+
+; Clock               ; Setup  ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+--------+---------+----------+---------+---------------------+
+; Worst-case Slack    ; -0.198 ; -2.695  ; N/A      ; N/A     ; -1.631              ;
+;  E                  ; -0.046 ; -2.695  ; N/A      ; N/A     ; -1.631              ;
+;  Ex5:inst1|Ex1:c4|Q ; -0.097 ; -2.286  ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst2|Ex1:c4|Q ; -0.046 ; -2.142  ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst3|Ex1:c4|Q ; -0.046 ; -2.327  ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst4|Ex1:c4|Q ; -0.198 ; -2.269  ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst5|Ex1:c4|Q ; -0.046 ; -2.076  ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst6|Ex1:c4|Q ; -0.045 ; 0.215   ; N/A      ; N/A     ; -0.611              ;
+;  Ex5:inst|Ex1:c4|Q  ; -0.119 ; -2.268  ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS     ; -0.77  ; -16.063 ; 0.0      ; 0.0     ; -39.513             ;
+;  E                  ; -0.064 ; -2.695  ; N/A      ; N/A     ; -6.519              ;
+;  Ex5:inst1|Ex1:c4|Q ; -0.115 ; -2.286  ; N/A      ; N/A     ; -4.888              ;
+;  Ex5:inst2|Ex1:c4|Q ; -0.064 ; -2.142  ; N/A      ; N/A     ; -4.888              ;
+;  Ex5:inst3|Ex1:c4|Q ; -0.064 ; -2.327  ; N/A      ; N/A     ; -4.888              ;
+;  Ex5:inst4|Ex1:c4|Q ; -0.198 ; -2.269  ; N/A      ; N/A     ; -4.888              ;
+;  Ex5:inst5|Ex1:c4|Q ; -0.064 ; -2.076  ; N/A      ; N/A     ; -4.888              ;
+;  Ex5:inst6|Ex1:c4|Q ; -0.064 ; 0.000   ; N/A      ; N/A     ; -3.666              ;
+;  Ex5:inst|Ex1:c4|Q  ; -0.137 ; -2.268  ; N/A      ; N/A     ; -4.888              ;
++---------------------+--------+---------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 6.236 ; 6.236 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; D         ; Ex5:inst6|Ex1:c4|Q ; 3.372 ; 3.372 ; Rise       ; Ex5:inst6|Ex1:c4|Q ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Transfers                                                                     ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; E                  ; E                  ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst|Ex1:c4|Q  ; E                  ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 6        ; 0        ; 0        ; 0        ;
+; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q  ; 7        ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Hold Transfers                                                                      ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; E                  ; E                  ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst|Ex1:c4|Q  ; E                  ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst1|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst2|Ex1:c4|Q ; Ex5:inst1|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst2|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst3|Ex1:c4|Q ; Ex5:inst2|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst3|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst4|Ex1:c4|Q ; Ex5:inst3|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst4|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst5|Ex1:c4|Q ; Ex5:inst4|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst5|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 7        ; 0        ; 0        ; 0        ;
+; Ex5:inst6|Ex1:c4|Q ; Ex5:inst5|Ex1:c4|Q ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst6|Ex1:c4|Q ; Ex5:inst6|Ex1:c4|Q ; 6        ; 0        ; 0        ; 0        ;
+; Ex5:inst1|Ex1:c4|Q ; Ex5:inst|Ex1:c4|Q  ; 1        ; 1        ; 0        ; 0        ;
+; Ex5:inst|Ex1:c4|Q  ; Ex5:inst|Ex1:c4|Q  ; 7        ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Tue Jan 19 10:41:38 2021
+Info: Command: quartus_sta TD2 -c TD2
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'TD2.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Ex5:inst6|Ex1:c4|Q Ex5:inst6|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst5|Ex1:c4|Q Ex5:inst5|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst4|Ex1:c4|Q Ex5:inst4|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst3|Ex1:c4|Q Ex5:inst3|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst2|Ex1:c4|Q Ex5:inst2|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst1|Ex1:c4|Q Ex5:inst1|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name Ex5:inst|Ex1:c4|Q Ex5:inst|Ex1:c4|Q
+    Info (332105): create_clock -period 1.000 -name E E
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.198
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.198        -0.198 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):    -0.119        -0.137 Ex5:inst|Ex1:c4|Q 
+    Info (332119):    -0.097        -0.115 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):    -0.046        -0.064 E 
+    Info (332119):    -0.046        -0.064 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):    -0.046        -0.064 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):    -0.046        -0.064 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):    -0.045        -0.064 Ex5:inst6|Ex1:c4|Q 
+Info (332146): Worst-case hold slack is -2.695
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.695        -2.695 E 
+    Info (332119):    -2.327        -2.327 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):    -2.286        -2.286 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):    -2.269        -2.269 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):    -2.268        -2.268 Ex5:inst|Ex1:c4|Q 
+    Info (332119):    -2.142        -2.142 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):    -2.076        -2.076 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):     0.445         0.000 Ex5:inst6|Ex1:c4|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631        -6.519 E 
+    Info (332119):    -0.611        -4.888 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):    -0.611        -4.888 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):    -0.611        -4.888 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):    -0.611        -4.888 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):    -0.611        -4.888 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):    -0.611        -4.888 Ex5:inst|Ex1:c4|Q 
+    Info (332119):    -0.611        -3.666 Ex5:inst6|Ex1:c4|Q 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.510
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.510         0.000 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):     0.548         0.000 Ex5:inst|Ex1:c4|Q 
+    Info (332119):     0.561         0.000 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):     0.565         0.000 E 
+    Info (332119):     0.565         0.000 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):     0.565         0.000 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):     0.565         0.000 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):     0.565         0.000 Ex5:inst6|Ex1:c4|Q 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.725
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.725        -1.725 E 
+    Info (332119):    -1.466        -1.466 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):    -1.438        -1.438 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):    -1.433        -1.433 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):    -1.433        -1.433 Ex5:inst|Ex1:c4|Q 
+    Info (332119):    -1.418        -1.418 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):    -1.371        -1.371 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):     0.215         0.000 Ex5:inst6|Ex1:c4|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -5.380 E 
+    Info (332119):    -0.500        -4.000 Ex5:inst1|Ex1:c4|Q 
+    Info (332119):    -0.500        -4.000 Ex5:inst2|Ex1:c4|Q 
+    Info (332119):    -0.500        -4.000 Ex5:inst3|Ex1:c4|Q 
+    Info (332119):    -0.500        -4.000 Ex5:inst4|Ex1:c4|Q 
+    Info (332119):    -0.500        -4.000 Ex5:inst5|Ex1:c4|Q 
+    Info (332119):    -0.500        -4.000 Ex5:inst|Ex1:c4|Q 
+    Info (332119):    -0.500        -3.000 Ex5:inst6|Ex1:c4|Q 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 440 megabytes
+    Info: Processing ended: Tue Jan 19 10:41:39 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

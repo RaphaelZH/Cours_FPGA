@@ -1,0 +1,493 @@
+|Ex5_SCHEME
+D <= Ex5:inst7.S5
+E => Ex5:inst.clk
+
+
+|Ex5_SCHEME|Ex5:inst7
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst7|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst7|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst7|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst7|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst6
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst6|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst6|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst6|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst6|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst5
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst5|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst5|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst5|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst5|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst4
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst4|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst4|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst4|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst4|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst3
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst3|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst3|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst3|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst3|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst2
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst2|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst2|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst2|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst2|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst1
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst1|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst1|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst1|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst1|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst
+clk => Ex1:c1.clk
+clk => Ex1:c2.clk
+clk => Ex1:c3.clk
+clk => Ex1:c4.clk
+set => Ex1:c1.set
+set => Ex1:c2.set
+set => Ex1:c3.set
+set => Ex1:c4.set
+reset => Ex1:c1.reset
+reset => Ex1:c2.reset
+reset => Ex1:c3.reset
+reset => Ex1:c4.reset
+D[0] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[2] => ~NO_FANOUT~
+D[3] => ~NO_FANOUT~
+Q[0] <= Ex1:c1.q
+Q[1] <= Ex1:c2.q
+Q[2] <= Ex1:c3.q
+Q[3] <= Ex1:c4.q
+S10 <= Ex1:c4.q
+S5 <= Ex1:c3.q
+
+
+|Ex5_SCHEME|Ex5:inst|Ex1:c1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst|Ex1:c2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst|Ex1:c3
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Ex5_SCHEME|Ex5:inst|Ex1:c4
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+set => Q~reg0.PRESET
+set => Q.IN0
+reset => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
