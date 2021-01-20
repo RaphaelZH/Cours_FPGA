@@ -1,0 +1,158 @@
+|controleur_SCHEME
+S1[0] <= helo:inst2.S[0]
+S1[1] <= helo:inst2.S[1]
+S1[2] <= helo:inst2.S[2]
+S1[3] <= helo:inst2.S[3]
+S1[4] <= helo:inst2.S[4]
+S1[5] <= helo:inst2.S[5]
+S1[6] <= helo:inst2.S[6]
+E[0] => controleur:inst.E[0]
+E[1] => controleur:inst.E[1]
+S2[0] <= helo:inst3.S[0]
+S2[1] <= helo:inst3.S[1]
+S2[2] <= helo:inst3.S[2]
+S2[3] <= helo:inst3.S[3]
+S2[4] <= helo:inst3.S[4]
+S2[5] <= helo:inst3.S[5]
+S2[6] <= helo:inst3.S[6]
+S3[0] <= helo:inst4.S[0]
+S3[1] <= helo:inst4.S[1]
+S3[2] <= helo:inst4.S[2]
+S3[3] <= helo:inst4.S[3]
+S3[4] <= helo:inst4.S[4]
+S3[5] <= helo:inst4.S[5]
+S3[6] <= helo:inst4.S[6]
+S4[0] <= helo:inst5.S[0]
+S4[1] <= helo:inst5.S[1]
+S4[2] <= helo:inst5.S[2]
+S4[3] <= helo:inst5.S[3]
+S4[4] <= helo:inst5.S[4]
+S4[5] <= helo:inst5.S[5]
+S4[6] <= helo:inst5.S[6]
+
+
+|controleur_SCHEME|helo:inst2
+E[0] => Mux1.IN10
+E[0] => Mux2.IN10
+E[0] => Mux3.IN10
+E[0] => Mux4.IN5
+E[1] => Mux0.IN5
+E[1] => Mux1.IN9
+E[1] => Mux2.IN9
+E[1] => Mux3.IN9
+E[2] => Mux0.IN4
+E[2] => Mux1.IN8
+E[2] => Mux2.IN8
+E[2] => Mux3.IN8
+E[2] => Mux4.IN4
+E[2] => S[5].DATAIN
+E[2] => S[4].DATAIN
+S[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controleur_SCHEME|controleur:inst
+E[0] => Mux0.IN5
+E[0] => Mux1.IN5
+E[0] => B[0].DATAIN
+E[0] => D[0].DATAIN
+E[0] => C[0].DATAIN
+E[0] => A[0].DATAIN
+E[1] => Mux0.IN4
+E[1] => Mux1.IN4
+E[1] => C[1].DATAIN
+E[1] => A[1].DATAIN
+A[0] <= E[0].DB_MAX_OUTPUT_PORT_TYPE
+A[1] <= E[1].DB_MAX_OUTPUT_PORT_TYPE
+A[2] <= <GND>
+B[0] <= E[0].DB_MAX_OUTPUT_PORT_TYPE
+B[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+B[2] <= <GND>
+C[0] <= E[0].DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= E[1].DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= <GND>
+D[0] <= E[0].DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= <GND>
+
+
+|controleur_SCHEME|helo:inst3
+E[0] => Mux1.IN10
+E[0] => Mux2.IN10
+E[0] => Mux3.IN10
+E[0] => Mux4.IN5
+E[1] => Mux0.IN5
+E[1] => Mux1.IN9
+E[1] => Mux2.IN9
+E[1] => Mux3.IN9
+E[2] => Mux0.IN4
+E[2] => Mux1.IN8
+E[2] => Mux2.IN8
+E[2] => Mux3.IN8
+E[2] => Mux4.IN4
+E[2] => S[5].DATAIN
+E[2] => S[4].DATAIN
+S[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controleur_SCHEME|helo:inst4
+E[0] => Mux1.IN10
+E[0] => Mux2.IN10
+E[0] => Mux3.IN10
+E[0] => Mux4.IN5
+E[1] => Mux0.IN5
+E[1] => Mux1.IN9
+E[1] => Mux2.IN9
+E[1] => Mux3.IN9
+E[2] => Mux0.IN4
+E[2] => Mux1.IN8
+E[2] => Mux2.IN8
+E[2] => Mux3.IN8
+E[2] => Mux4.IN4
+E[2] => S[5].DATAIN
+E[2] => S[4].DATAIN
+S[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controleur_SCHEME|helo:inst5
+E[0] => Mux1.IN10
+E[0] => Mux2.IN10
+E[0] => Mux3.IN10
+E[0] => Mux4.IN5
+E[1] => Mux0.IN5
+E[1] => Mux1.IN9
+E[1] => Mux2.IN9
+E[1] => Mux3.IN9
+E[2] => Mux0.IN4
+E[2] => Mux1.IN8
+E[2] => Mux2.IN8
+E[2] => Mux3.IN8
+E[2] => Mux4.IN4
+E[2] => S[5].DATAIN
+E[2] => S[4].DATAIN
+S[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= E[2].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
