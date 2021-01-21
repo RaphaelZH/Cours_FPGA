@@ -1,0 +1,30 @@
+-- fonction decode_clavier.vhd
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY decode_clavier.all;
+	PORT
+	(
+		--colonnes
+		col4    : IN    STD_LOGIC;
+		col3    : IN    STD_LOGIC;
+		col2    : IN    STD_LOGIC;
+		col1    : IN    STD_LOGIC;
+		--lignes
+		lig4    : IN    STD_LOGIC;
+		lig3    : IN    STD_LOGIC;
+		lig2    : IN    STD_LOGIC;
+		lig1    : IN    STD_LOGIC;
+		--touche
+		touche  : OUT   STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END decoder_clavier;
+
+ARCHITECTURE moncodage OF decode_clavier IS
+temporaire: STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+BEGIN
+	temporaire <= col4 & col3 & col2 & col1 & lig4 & lig3 & lig2 & lig1;
+	
+	touche <= 
