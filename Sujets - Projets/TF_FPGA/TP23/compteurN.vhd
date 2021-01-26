@@ -35,7 +35,7 @@ millier      <= count_m;
 			count_u <= (OTHERS => '0');
 			count_d <= (OTHERS => '0');
 			count_c <= (OTHERS => '0');
-			count_d <= (OTHERS => '0');
+			count_m <= (OTHERS => '0');
 		ELSIF (clk'EVENT AND clk = '1') THEN
 			count_u <= count_u + 1;
 			IF count_u = "1001" THEN

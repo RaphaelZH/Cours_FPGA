@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP23
-Wed Jan 20 18:55:42 2021
+Tue Jan 26 13:31:35 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,10 +13,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: lpm_mux0:inst16|LPM_MUX:LPM_MUX_component
+ 14. Parameter Settings for User Entity Instance: diviseur:inst17
+ 15. Parameter Settings for User Entity Instance: diviseur:inst15
+ 16. Parameter Settings for User Entity Instance: diviseur:inst14
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 20 18:55:42 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 26 13:31:35 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; TP23                                            ;
-; Top-level Entity Name              ; compteurN                                       ;
+; Top-level Entity Name              ; TP23                                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 30                                              ;
-;     Total combinational functions  ; 30                                              ;
-;     Dedicated logic registers      ; 16                                              ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 19                                              ;
+; Total logic elements               ; 79                                              ;
+;     Total combinational functions  ; 63                                              ;
+;     Dedicated logic registers      ; 37                                              ;
+; Total registers                    ; 37                                              ;
+; Total pins                         ; 31                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +72,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; compteurN          ; TP23               ;
+; Top-level entity name                                                      ; TP23               ; TP23               ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,53 +162,101 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
-; compteurN.vhd                    ; yes             ; User VHDL File  ; //Mac/Home/Documents/TF_FPGA/TP23/compteurN.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
+; compteurN.vhd                    ; yes             ; User VHDL File                     ; //Mac/Home/Documents/TF_FPGA/TP23/compteurN.vhd                  ;         ;
+; latch_data.vhd                   ; yes             ; User VHDL File                     ; //Mac/Home/Documents/TF_FPGA/TP23/latch_data.vhd                 ;         ;
+; binaire_7seg.vhd                 ; yes             ; User VHDL File                     ; //Mac/Home/Documents/TF_FPGA/TP23/binaire_7seg.vhd               ;         ;
+; Fenetre_Mesure.vhd               ; yes             ; User VHDL File                     ; //Mac/Home/Documents/TF_FPGA/TP23/Fenetre_Mesure.vhd             ;         ;
+; TP23.bdf                         ; yes             ; User Block Diagram/Schematic File  ; //Mac/Home/Documents/TF_FPGA/TP23/TP23.bdf                       ;         ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; //Mac/Home/Documents/TF_FPGA/TP23/lpm_mux0.vhd                   ;         ;
+; diviseur.vhd                     ; yes             ; User VHDL File                     ; //Mac/Home/Documents/TF_FPGA/TP23/diviseur.vhd                   ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc     ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc   ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc   ;         ;
+; db/mux_33e.tdf                   ; yes             ; Auto-Generated Megafunction        ; //Mac/Home/Documents/TF_FPGA/TP23/db/mux_33e.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 30    ;
-;                                             ;       ;
-; Total combinational functions               ; 30    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 22    ;
-;     -- 3 input functions                    ; 7     ;
-;     -- <=2 input functions                  ; 1     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 30    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 16    ;
-;     -- Dedicated logic registers            ; 16    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 19    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 170   ;
-; Average fan-out                             ; 2.62  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimated Total logic elements              ; 79                                 ;
+;                                             ;                                    ;
+; Total combinational functions               ; 63                                 ;
+; Logic element usage by number of LUT inputs ;                                    ;
+;     -- 4 input functions                    ; 52                                 ;
+;     -- 3 input functions                    ; 9                                  ;
+;     -- <=2 input functions                  ; 2                                  ;
+;                                             ;                                    ;
+; Logic elements by mode                      ;                                    ;
+;     -- normal mode                          ; 63                                 ;
+;     -- arithmetic mode                      ; 0                                  ;
+;                                             ;                                    ;
+; Total registers                             ; 37                                 ;
+;     -- Dedicated logic registers            ; 37                                 ;
+;     -- I/O registers                        ; 0                                  ;
+;                                             ;                                    ;
+; I/O pins                                    ; 31                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                                  ;
+; Maximum fan-out node                        ; Fenetre_Mesure:inst|latch_compteur ;
+; Maximum fan-out                             ; 17                                 ;
+; Total fan-out                               ; 360                                ;
+; Average fan-out                             ; 2.75                               ;
++---------------------------------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |compteurN                 ; 30 (30)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |compteurN          ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |TP23                      ; 63 (0)            ; 37 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |TP23                     ; work         ;
+;    |Fenetre_Mesure:inst|   ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|Fenetre_Mesure:inst ; work         ;
+;    |binaire_7seg:inst2|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|binaire_7seg:inst2  ; work         ;
+;    |binaire_7seg:inst3|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|binaire_7seg:inst3  ; work         ;
+;    |binaire_7seg:inst4|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|binaire_7seg:inst4  ; work         ;
+;    |binaire_7seg:inst5|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|binaire_7seg:inst5  ; work         ;
+;    |compteurN:inst10|      ; 28 (28)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|compteurN:inst10    ; work         ;
+;    |latch_data:inst6|      ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|latch_data:inst6    ; work         ;
+;    |latch_data:inst7|      ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|latch_data:inst7    ; work         ;
+;    |latch_data:inst8|      ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|latch_data:inst8    ; work         ;
+;    |latch_data:inst9|      ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP23|latch_data:inst9    ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                  ;
++--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File                                ;
++--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |TP23|lpm_mux0:inst16 ; //Mac/Home/Documents/TF_FPGA/TP23/lpm_mux0.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; diviseur:inst14|div                    ; Lost fanout        ;
+; diviseur:inst14|temp[0..31]            ; Lost fanout        ;
+; diviseur:inst15|temp[0]                ; Lost fanout        ;
+; diviseur:inst15|div                    ; Lost fanout        ;
+; diviseur:inst15|temp[1..31]            ; Lost fanout        ;
+; diviseur:inst17|temp[0..3]             ; Lost fanout        ;
+; diviseur:inst17|div                    ; Lost fanout        ;
+; diviseur:inst17|temp[4..31]            ; Lost fanout        ;
+; Total Number of Removed Registers = 99 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -209,25 +264,84 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 37    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |compteurN|count_d[0]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |compteurN|count_c[0]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |compteurN|count_m[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Fenetre_Mesure:inst|reset_compteur     ; 17      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TP23|compteurN:inst10|count_d[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TP23|compteurN:inst10|count_c[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TP23|compteurN:inst10|count_m[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux0:inst16|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+--------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                             ;
++------------------------+------------+--------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                   ;
+; LPM_WIDTH              ; 1          ; Signed Integer                                   ;
+; LPM_SIZE               ; 4          ; Signed Integer                                   ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                                   ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                   ;
+; CBXI_PARAMETER         ; mux_33e    ; Untyped                                          ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                          ;
++------------------------+------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: diviseur:inst17 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 1000  ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: diviseur:inst15 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 100   ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: diviseur:inst14 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N              ; 10    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -245,7 +359,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jan 20 18:55:38 2021
+    Info: Processing started: Tue Jan 26 13:31:32 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP23 -c TP23
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file compteurn.vhd
@@ -260,19 +374,48 @@ Info (12021): Found 2 design units, including 1 entities, in source file binaire
 Info (12021): Found 2 design units, including 1 entities, in source file fenetre_mesure.vhd
     Info (12022): Found design unit 1: Fenetre_Mesure-behav
     Info (12023): Found entity 1: Fenetre_Mesure
-Info (12127): Elaborating entity "compteurN" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file tp23.bdf
+    Info (12023): Found entity 1: TP23
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_mux0.vhd
+    Info (12022): Found design unit 1: lpm_mux0-SYN
+    Info (12023): Found entity 1: lpm_mux0
+Info (12021): Found 2 design units, including 1 entities, in source file diviseur.vhd
+    Info (12022): Found design unit 1: diviseur-myarchitecture
+    Info (12023): Found entity 1: diviseur
+Info (12127): Elaborating entity "TP23" for the top level hierarchy
+Info (12128): Elaborating entity "binaire_7seg" for hierarchy "binaire_7seg:inst2"
+Info (12128): Elaborating entity "latch_data" for hierarchy "latch_data:inst6"
+Info (12128): Elaborating entity "Fenetre_Mesure" for hierarchy "Fenetre_Mesure:inst"
+Info (12128): Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst16"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst16|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux0:inst16|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux0:inst16|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "1"
+    Info (12134): Parameter "LPM_SIZE" = "4"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_33e.tdf
+    Info (12023): Found entity 1: mux_33e
+Info (12128): Elaborating entity "mux_33e" for hierarchy "lpm_mux0:inst16|LPM_MUX:LPM_MUX_component|mux_33e:auto_generated"
+Info (12128): Elaborating entity "diviseur" for hierarchy "diviseur:inst17"
+Info (12128): Elaborating entity "diviseur" for hierarchy "diviseur:inst15"
+Info (12128): Elaborating entity "diviseur" for hierarchy "diviseur:inst14"
+Info (12128): Elaborating entity "compteurN" for hierarchy "compteurN:inst10"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (17049): 99 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "enable"
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 30 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4635 megabytes
-    Info: Processing ended: Wed Jan 20 18:55:42 2021
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 79 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Tue Jan 26 13:31:35 2021
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

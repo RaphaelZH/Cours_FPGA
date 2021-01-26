@@ -3,27 +3,67 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -2.025
-TNS   : -24.059
+Slack : -1.847
+TNS   : -23.047
+
+Type  : Slow Model Setup 'Fenetre_Mesure:inst|latch_compteur'
+Slack : -0.988
+TNS   : -14.615
 
 Type  : Slow Model Hold 'clk'
-Slack : 0.445
+Slack : -2.661
+TNS   : -2.661
+
+Type  : Slow Model Hold 'Fenetre_Mesure:inst|latch_compteur'
+Slack : 1.559
 TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk'
+Slack : 0.652
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk'
+Slack : -0.192
+TNS   : -0.768
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.631
-TNS   : -21.183
+TNS   : -27.293
+
+Type  : Slow Model Minimum Pulse Width 'Fenetre_Mesure:inst|latch_compteur'
+Slack : -0.611
+TNS   : -19.552
 
 Type  : Fast Model Setup 'clk'
-Slack : -0.135
-TNS   : -0.892
+Slack : -0.085
+TNS   : -0.479
+
+Type  : Fast Model Setup 'Fenetre_Mesure:inst|latch_compteur'
+Slack : 0.113
+TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : 0.215
+Slack : -1.690
+TNS   : -1.690
+
+Type  : Fast Model Hold 'Fenetre_Mesure:inst|latch_compteur'
+Slack : 0.657
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk'
+Slack : 0.751
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk'
+Slack : 0.020
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -17.380
+TNS   : -22.380
+
+Type  : Fast Model Minimum Pulse Width 'Fenetre_Mesure:inst|latch_compteur'
+Slack : -0.500
+TNS   : -16.000
 
 ------------------------------------------------------------
