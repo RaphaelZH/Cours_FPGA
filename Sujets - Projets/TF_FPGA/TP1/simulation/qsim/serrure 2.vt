@@ -1,0 +1,338 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "01/19/2021 13:52:03"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    decode_clavier
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module decode_clavier_vlg_sample_tst(
+	col1,
+	col2,
+	col3,
+	col4,
+	lig1,
+	lig2,
+	lig3,
+	lig4,
+	sampler_tx
+);
+input  col1;
+input  col2;
+input  col3;
+input  col4;
+input  lig1;
+input  lig2;
+input  lig3;
+input  lig4;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(col1 or col2 or col3 or col4 or lig1 or lig2 or lig3 or lig4)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module decode_clavier_vlg_check_tst (
+	touche,
+	sampler_rx
+);
+input [3:0] touche;
+input sampler_rx;
+
+reg [3:0] touche_expected;
+
+reg [3:0] touche_prev;
+
+reg [3:0] touche_expected_prev;
+
+reg [3:0] last_touche_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	touche_prev = touche;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	touche_expected_prev = touche_expected;
+end
+
+
+// expected touche[ 3 ]
+initial
+begin
+	touche_expected[3] = 1'bX;
+end 
+// expected touche[ 2 ]
+initial
+begin
+	touche_expected[2] = 1'bX;
+end 
+// expected touche[ 1 ]
+initial
+begin
+	touche_expected[1] = 1'bX;
+end 
+// expected touche[ 0 ]
+initial
+begin
+	touche_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(touche_expected or touche)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected touche = %b | ",touche_expected_prev);
+	$display("| real touche = %b | ",touche_prev);
+`endif
+	if (
+		( touche_expected_prev[0] !== 1'bx ) && ( touche_prev[0] !== touche_expected_prev[0] )
+		&& ((touche_expected_prev[0] !== last_touche_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port touche[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", touche_expected_prev);
+		$display ("     Real value = %b", touche_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_touche_exp[0] = touche_expected_prev[0];
+	end
+	if (
+		( touche_expected_prev[1] !== 1'bx ) && ( touche_prev[1] !== touche_expected_prev[1] )
+		&& ((touche_expected_prev[1] !== last_touche_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port touche[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", touche_expected_prev);
+		$display ("     Real value = %b", touche_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_touche_exp[1] = touche_expected_prev[1];
+	end
+	if (
+		( touche_expected_prev[2] !== 1'bx ) && ( touche_prev[2] !== touche_expected_prev[2] )
+		&& ((touche_expected_prev[2] !== last_touche_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port touche[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", touche_expected_prev);
+		$display ("     Real value = %b", touche_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_touche_exp[2] = touche_expected_prev[2];
+	end
+	if (
+		( touche_expected_prev[3] !== 1'bx ) && ( touche_prev[3] !== touche_expected_prev[3] )
+		&& ((touche_expected_prev[3] !== last_touche_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port touche[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", touche_expected_prev);
+		$display ("     Real value = %b", touche_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_touche_exp[3] = touche_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module decode_clavier_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg col1;
+reg col2;
+reg col3;
+reg col4;
+reg lig1;
+reg lig2;
+reg lig3;
+reg lig4;
+// wires                                               
+wire [3:0] touche;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+decode_clavier i1 (
+// port map - connection between master ports and signals/registers   
+	.col1(col1),
+	.col2(col2),
+	.col3(col3),
+	.col4(col4),
+	.lig1(lig1),
+	.lig2(lig2),
+	.lig3(lig3),
+	.lig4(lig4),
+	.touche(touche)
+);
+
+// col1
+initial
+begin
+	col1 = 1'b0;
+	col1 = #50000 1'b1;
+	col1 = #40000 1'b0;
+	col1 = #260000 1'b1;
+	col1 = #110000 1'b0;
+end 
+
+// col2
+initial
+begin
+	col2 = 1'b0;
+	col2 = #110000 1'b1;
+	col2 = #40000 1'b0;
+	col2 = #310000 1'b1;
+	col2 = #100000 1'b0;
+end 
+
+// col3
+initial
+begin
+	col3 = 1'b0;
+	col3 = #190000 1'b1;
+	col3 = #50000 1'b0;
+end 
+
+// col4
+initial
+begin
+	col4 = 1'b0;
+	col4 = #290000 1'b1;
+	col4 = #60000 1'b0;
+end 
+
+// lig1
+initial
+begin
+	lig1 = 1'b0;
+end 
+
+// lig2
+initial
+begin
+	lig2 = 1'b0;
+	lig2 = #100000 1'b1;
+	lig2 = #70000 1'b0;
+	lig2 = #90000 1'b1;
+	lig2 = #180000 1'b0;
+end 
+
+// lig3
+initial
+begin
+	lig3 = 1'b0;
+	lig3 = #50000 1'b1;
+	lig3 = #110000 1'b0;
+	lig3 = #220000 1'b1;
+	lig3 = #210000 1'b0;
+end 
+
+// lig4
+initial
+begin
+	lig4 = 1'b0;
+	lig4 = #20000 1'b1;
+	lig4 = #100000 1'b0;
+	lig4 = #90000 1'b1;
+	lig4 = #140000 1'b0;
+end 
+
+decode_clavier_vlg_sample_tst tb_sample (
+	.col1(col1),
+	.col2(col2),
+	.col3(col3),
+	.col4(col4),
+	.lig1(lig1),
+	.lig2(lig2),
+	.lig3(lig3),
+	.lig4(lig4),
+	.sampler_tx(sampler)
+);
+
+decode_clavier_vlg_check_tst tb_out(
+	.touche(touche),
+	.sampler_rx(sampler)
+);
+endmodule
+

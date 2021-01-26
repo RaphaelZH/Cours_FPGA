@@ -9,7 +9,6 @@ GENERIC(
 	(
 		--ENTREES
 		clk 			:IN   STD_LOGIC;
-		reset			:IN   STD_LOGIC;
 		--SORTIES
 		clk_div 		:OUT  STD_LOGIC
 	);

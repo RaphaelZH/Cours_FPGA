@@ -3,64 +3,88 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -1.847
-TNS   : -23.047
+Slack : -5.783
+TNS   : -303.687
+
+Type  : Slow Model Setup 'measure'
+Slack : -5.643
+TNS   : -88.215
 
 Type  : Slow Model Setup 'Fenetre_Mesure:inst|latch_compteur'
-Slack : -0.988
-TNS   : -14.615
+Slack : -5.139
+TNS   : -79.333
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.661
-TNS   : -2.661
+Slack : -6.627
+TNS   : -12.158
+
+Type  : Slow Model Hold 'measure'
+Slack : 0.445
+TNS   : 0.000
 
 Type  : Slow Model Hold 'Fenetre_Mesure:inst|latch_compteur'
-Slack : 1.559
+Slack : 5.627
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'clk'
-Slack : 0.652
+Slack : 0.047
 TNS   : 0.000
 
 Type  : Slow Model Removal 'clk'
-Slack : -0.192
-TNS   : -0.768
+Slack : 0.418
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.631
-TNS   : -27.293
+TNS   : -147.049
+
+Type  : Slow Model Minimum Pulse Width 'measure'
+Slack : -1.631
+TNS   : -41.957
 
 Type  : Slow Model Minimum Pulse Width 'Fenetre_Mesure:inst|latch_compteur'
 Slack : -0.611
 TNS   : -19.552
 
 Type  : Fast Model Setup 'clk'
-Slack : -0.085
-TNS   : -0.479
+Slack : -1.956
+TNS   : -60.444
+
+Type  : Fast Model Setup 'measure'
+Slack : -1.642
+TNS   : -18.522
 
 Type  : Fast Model Setup 'Fenetre_Mesure:inst|latch_compteur'
-Slack : 0.113
-TNS   : 0.000
+Slack : -1.548
+TNS   : -23.786
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.690
-TNS   : -1.690
+Slack : -3.304
+TNS   : -5.528
+
+Type  : Fast Model Hold 'measure'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Hold 'Fenetre_Mesure:inst|latch_compteur'
-Slack : 0.657
+Slack : 2.332
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'clk'
-Slack : 0.751
+Slack : 0.463
 TNS   : 0.000
 
 Type  : Fast Model Removal 'clk'
-Slack : 0.020
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -22.380
+TNS   : -120.380
+
+Type  : Fast Model Minimum Pulse Width 'measure'
+Slack : -1.380
+TNS   : -34.380
 
 Type  : Fast Model Minimum Pulse Width 'Fenetre_Mesure:inst|latch_compteur'
 Slack : -0.500

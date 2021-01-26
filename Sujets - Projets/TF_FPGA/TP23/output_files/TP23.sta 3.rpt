@@ -1,0 +1,1679 @@
+TimeQuest Timing Analyzer report for TP23
+Tue Jan 26 13:31:46 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Setup: 'Fenetre_Mesure:inst|latch_compteur'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'Fenetre_Mesure:inst|latch_compteur'
+ 15. Slow Model Recovery: 'clk'
+ 16. Slow Model Removal: 'clk'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'Fenetre_Mesure:inst|latch_compteur'
+ 19. Setup Times
+ 20. Hold Times
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Setup: 'Fenetre_Mesure:inst|latch_compteur'
+ 30. Fast Model Hold: 'clk'
+ 31. Fast Model Hold: 'Fenetre_Mesure:inst|latch_compteur'
+ 32. Fast Model Recovery: 'clk'
+ 33. Fast Model Removal: 'clk'
+ 34. Fast Model Minimum Pulse Width: 'clk'
+ 35. Fast Model Minimum Pulse Width: 'Fenetre_Mesure:inst|latch_compteur'
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Setup Transfers
+ 46. Hold Transfers
+ 47. Recovery Transfers
+ 48. Removal Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; TP23                                                              ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                 ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; Clock Name                         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; clk                                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                ;
+; Fenetre_Mesure:inst|latch_compteur ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Fenetre_Mesure:inst|latch_compteur } ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 351.25 MHz ; 351.25 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------+
+; Slow Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.847 ; -23.047       ;
+; Fenetre_Mesure:inst|latch_compteur ; -0.988 ; -14.615       ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Slow Model Hold Summary                                     ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -2.661 ; -2.661        ;
+; Fenetre_Mesure:inst|latch_compteur ; 1.559  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.652 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Removal Summary     ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.192 ; -0.768        ;
++-------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.631 ; -27.293       ;
+; Fenetre_Mesure:inst|latch_compteur ; -0.611 ; -19.552       ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                  ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -1.847 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.886      ;
+; -1.847 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.886      ;
+; -1.839 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.878      ;
+; -1.839 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.878      ;
+; -1.830 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.869      ;
+; -1.829 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.868      ;
+; -1.817 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.858      ;
+; -1.814 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.853      ;
+; -1.813 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.851      ;
+; -1.813 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.851      ;
+; -1.813 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.852      ;
+; -1.805 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.843      ;
+; -1.805 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.843      ;
+; -1.804 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.840      ;
+; -1.804 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.840      ;
+; -1.801 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.842      ;
+; -1.800 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.841      ;
+; -1.796 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.832      ;
+; -1.796 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.832      ;
+; -1.787 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.826      ;
+; -1.787 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.826      ;
+; -1.779 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.818      ;
+; -1.779 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.818      ;
+; -1.779 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.817      ;
+; -1.779 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.817      ;
+; -1.771 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.809      ;
+; -1.771 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.809      ;
+; -1.769 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.805      ;
+; -1.769 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.805      ;
+; -1.761 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.797      ;
+; -1.761 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.797      ;
+; -1.757 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.798      ;
+; -1.741 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.782      ;
+; -1.740 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.781      ;
+; -1.689 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.727      ;
+; -1.689 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.727      ;
+; -1.681 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.719      ;
+; -1.681 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.719      ;
+; -1.676 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.717      ;
+; -1.646 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.682      ;
+; -1.644 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.683      ;
+; -1.643 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.682      ;
+; -1.630 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.666      ;
+; -1.616 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.657      ;
+; -1.606 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.644      ;
+; -1.594 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.633      ;
+; -1.594 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.633      ;
+; -1.592 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.630      ;
+; -1.591 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.629      ;
+; -1.586 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.625      ;
+; -1.586 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.625      ;
+; -1.582 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.618      ;
+; -1.582 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.618      ;
+; -1.574 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.610      ;
+; -1.574 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.610      ;
+; -1.571 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.609      ;
+; -1.564 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.605      ;
+; -1.557 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.595      ;
+; -1.556 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.594      ;
+; -1.554 ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.554 ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.548 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.585      ;
+; -1.548 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.585      ;
+; -1.548 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.589      ;
+; -1.547 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.588      ;
+; -1.546 ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.584      ;
+; -1.546 ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.584      ;
+; -1.540 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.577      ;
+; -1.540 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.577      ;
+; -1.537 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.575      ;
+; -1.532 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.569      ;
+; -1.532 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.569      ;
+; -1.524 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.561      ;
+; -1.524 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.561      ;
+; -1.471 ; compteurN:inst10|count_u[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.510      ;
+; -1.470 ; compteurN:inst10|count_u[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.509      ;
+; -1.460 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.496      ;
+; -1.427 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.466      ;
+; -1.427 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.466      ;
+; -1.423 ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.464      ;
+; -1.420 ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.456      ;
+; -1.420 ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.456      ;
+; -1.419 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.458      ;
+; -1.419 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.458      ;
+; -1.412 ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.448      ;
+; -1.412 ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.448      ;
+; -1.397 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.438      ;
+; -1.387 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.425      ;
+; -1.386 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.424      ;
+; -1.384 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.422      ;
+; -1.383 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.421      ;
+; -1.381 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.422      ;
+; -1.380 ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.421      ;
+; -1.370 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.408      ;
+; -1.369 ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.407      ;
+; -1.362 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.399      ;
+; -1.362 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.399      ;
+; -1.356 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.395      ;
+; -1.356 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.395      ;
+; -1.354 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.391      ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Fenetre_Mesure:inst|latch_compteur'                                                                                                         ;
++--------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; -0.988 ; compteurN:inst10|count_d[1] ; latch_data:inst7|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.095      ;
+; -0.976 ; compteurN:inst10|count_u[0] ; latch_data:inst6|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.083      ;
+; -0.975 ; compteurN:inst10|count_c[0] ; latch_data:inst8|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.082      ;
+; -0.969 ; compteurN:inst10|count_d[0] ; latch_data:inst7|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.076      ;
+; -0.967 ; compteurN:inst10|count_d[2] ; latch_data:inst7|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.074      ;
+; -0.966 ; compteurN:inst10|count_c[1] ; latch_data:inst8|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.073      ;
+; -0.964 ; compteurN:inst10|count_m[2] ; latch_data:inst9|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.071      ;
+; -0.963 ; compteurN:inst10|count_c[2] ; latch_data:inst8|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.070      ;
+; -0.963 ; compteurN:inst10|count_m[1] ; latch_data:inst9|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.070      ;
+; -0.947 ; compteurN:inst10|count_m[0] ; latch_data:inst9|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 1.054      ;
+; -0.863 ; compteurN:inst10|count_u[2] ; latch_data:inst6|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.970      ;
+; -0.828 ; compteurN:inst10|count_m[3] ; latch_data:inst9|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.935      ;
+; -0.821 ; compteurN:inst10|count_c[3] ; latch_data:inst8|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.928      ;
+; -0.810 ; compteurN:inst10|count_d[3] ; latch_data:inst7|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.917      ;
+; -0.808 ; compteurN:inst10|count_u[3] ; latch_data:inst6|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.915      ;
+; -0.807 ; compteurN:inst10|count_u[1] ; latch_data:inst6|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.931     ; 0.914      ;
++--------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                       ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -2.661 ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; clk         ; 0.000        ; 2.829      ; 0.731      ;
+; -2.161 ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; clk         ; -0.500       ; 2.829      ; 0.731      ;
+; 0.445  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|count          ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|temp           ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Fenetre_Mesure:inst|reset_compteur ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_m[2]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_m[3]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445  ; Fenetre_Mesure:inst|enable_temp    ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.525  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; 0.345      ; 1.156      ;
+; 0.637  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|temp           ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.923      ;
+; 0.641  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; 0.345      ; 1.272      ;
+; 0.822  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.108      ;
+; 0.823  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.109      ;
+; 0.823  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.109      ;
+; 0.874  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.160      ;
+; 0.875  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|count          ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.161      ;
+; 0.986  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.272      ;
+; 0.992  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.278      ;
+; 1.191  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|latch_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.477      ;
+; 1.209  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.495      ;
+; 1.211  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.497      ;
+; 1.212  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.498      ;
+; 1.253  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.539      ;
+; 1.260  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.546      ;
+; 1.262  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.548      ;
+; 1.263  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.549      ;
+; 1.281  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.567      ;
+; 1.447  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|latch_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.733      ;
+; 1.515  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.801      ;
+; 1.536  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.822      ;
+; 1.595  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.881      ;
+; 1.628  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.914      ;
+; 1.635  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.921      ;
+; 1.652  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 1.936      ;
+; 1.652  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 1.936      ;
+; 1.656  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 1.940      ;
+; 1.663  ; compteurN:inst10|count_m[2]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.949      ;
+; 1.683  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 1.969      ;
+; 1.715  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.001      ;
+; 1.718  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.004      ;
+; 1.719  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.005      ;
+; 1.749  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.036      ;
+; 1.749  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.036      ;
+; 1.751  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.037      ;
+; 1.789  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.075      ;
+; 1.825  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.109      ;
+; 1.825  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.109      ;
+; 1.829  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.113      ;
+; 1.874  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.160      ;
+; 1.886  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.172      ;
+; 1.892  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.178      ;
+; 1.898  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.184      ;
+; 1.922  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.209      ;
+; 1.922  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.209      ;
+; 1.933  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.218      ;
+; 1.933  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.218      ;
+; 1.941  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.226      ;
+; 1.941  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.226      ;
+; 1.960  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.246      ;
+; 1.972  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 2.261      ;
+; 1.974  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.260      ;
+; 1.977  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.263      ;
+; 1.984  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.268      ;
+; 1.989  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.273      ;
+; 1.989  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.273      ;
+; 1.989  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.273      ;
+; 1.995  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.279      ;
+; 1.995  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.279      ;
+; 1.998  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 2.287      ;
+; 1.999  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.283      ;
+; 2.007  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 2.296      ;
+; 2.008  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 2.297      ;
+; 2.011  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.295      ;
+; 2.011  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.295      ;
+; 2.012  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.298      ;
+; 2.015  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.299      ;
+; 2.039  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 2.323      ;
+; 2.075  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.361      ;
+; 2.076  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.362      ;
+; 2.078  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 2.364      ;
+; 2.092  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.379      ;
+; 2.092  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.379      ;
+; 2.106  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.391      ;
+; 2.106  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 2.391      ;
+; 2.108  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.395      ;
+; 2.108  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 2.395      ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Fenetre_Mesure:inst|latch_compteur'                                                                                                         ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; 1.559 ; compteurN:inst10|count_u[1] ; latch_data:inst6|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.914      ;
+; 1.560 ; compteurN:inst10|count_u[3] ; latch_data:inst6|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.915      ;
+; 1.562 ; compteurN:inst10|count_d[3] ; latch_data:inst7|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.917      ;
+; 1.573 ; compteurN:inst10|count_c[3] ; latch_data:inst8|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.928      ;
+; 1.580 ; compteurN:inst10|count_m[3] ; latch_data:inst9|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.935      ;
+; 1.615 ; compteurN:inst10|count_u[2] ; latch_data:inst6|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 0.970      ;
+; 1.699 ; compteurN:inst10|count_m[0] ; latch_data:inst9|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.054      ;
+; 1.715 ; compteurN:inst10|count_c[2] ; latch_data:inst8|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.070      ;
+; 1.715 ; compteurN:inst10|count_m[1] ; latch_data:inst9|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.070      ;
+; 1.716 ; compteurN:inst10|count_m[2] ; latch_data:inst9|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.071      ;
+; 1.718 ; compteurN:inst10|count_c[1] ; latch_data:inst8|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.073      ;
+; 1.719 ; compteurN:inst10|count_d[2] ; latch_data:inst7|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.074      ;
+; 1.721 ; compteurN:inst10|count_d[0] ; latch_data:inst7|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.076      ;
+; 1.727 ; compteurN:inst10|count_c[0] ; latch_data:inst8|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.082      ;
+; 1.728 ; compteurN:inst10|count_u[0] ; latch_data:inst6|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.083      ;
+; 1.740 ; compteurN:inst10|count_d[1] ; latch_data:inst7|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.931     ; 1.095      ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                                                     ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.652 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 1.000        ; 1.595      ; 1.981      ;
+; 0.652 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 1.595      ; 1.981      ;
+; 0.652 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; 1.595      ; 1.981      ;
+; 0.652 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 1.000        ; 1.595      ; 1.981      ;
+; 0.674 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[0] ; clk          ; clk         ; 1.000        ; 1.597      ; 1.961      ;
+; 0.674 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[2] ; clk          ; clk         ; 1.000        ; 1.597      ; 1.961      ;
+; 0.674 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[3] ; clk          ; clk         ; 1.000        ; 1.597      ; 1.961      ;
+; 0.674 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[1] ; clk          ; clk         ; 1.000        ; 1.597      ; 1.961      ;
+; 0.678 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 1.598      ; 1.958      ;
+; 0.678 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 1.598      ; 1.958      ;
+; 0.678 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 1.598      ; 1.958      ;
+; 0.678 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 1.598      ; 1.958      ;
+; 0.944 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 1.596      ; 1.690      ;
+; 0.944 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 1.596      ; 1.690      ;
+; 0.944 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 1.596      ; 1.690      ;
+; 0.944 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 1.596      ; 1.690      ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                                                       ;
++--------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.192 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 0.000        ; 1.596      ; 1.690      ;
+; -0.192 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 0.000        ; 1.596      ; 1.690      ;
+; -0.192 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 0.000        ; 1.596      ; 1.690      ;
+; -0.192 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 0.000        ; 1.596      ; 1.690      ;
+; 0.074  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 0.000        ; 1.598      ; 1.958      ;
+; 0.074  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 0.000        ; 1.598      ; 1.958      ;
+; 0.074  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 0.000        ; 1.598      ; 1.958      ;
+; 0.074  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 0.000        ; 1.598      ; 1.958      ;
+; 0.078  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[0] ; clk          ; clk         ; 0.000        ; 1.597      ; 1.961      ;
+; 0.078  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[2] ; clk          ; clk         ; 0.000        ; 1.597      ; 1.961      ;
+; 0.078  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[3] ; clk          ; clk         ; 0.000        ; 1.597      ; 1.961      ;
+; 0.078  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[1] ; clk          ; clk         ; 0.000        ; 1.597      ; 1.961      ;
+; 0.100  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 0.000        ; 1.595      ; 1.981      ;
+; 0.100  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 0.000        ; 1.595      ; 1.981      ;
+; 0.100  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 0.000        ; 1.595      ; 1.981      ;
+; 0.100  ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 0.000        ; 1.595      ; 1.981      ;
++--------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|count          ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|count          ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|enable_temp    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|enable_temp    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|reset_compteur ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|reset_compteur ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|temp           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|temp           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[0]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[1]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[2]        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[3]        ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[3]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|count|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|count|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|enable_temp|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|enable_temp|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|latch_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|latch_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|reset_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|reset_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|temp|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|temp|clk                      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Fenetre_Mesure:inst|latch_compteur'                                                                               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[0]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[1]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[2]           ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[3]           ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[3]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; measure   ; clk        ; 1.940 ; 1.940 ; Rise       ; clk             ;
+; reset     ; clk        ; 1.498 ; 1.498 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; measure   ; clk        ; -0.886 ; -0.886 ; Rise       ; clk             ;
+; reset     ; clk        ; -1.250 ; -1.250 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.021 ; 9.021 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.735 ; 8.735 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.755 ; 8.755 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.021 ; 9.021 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.751 ; 8.751 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.740 ; 8.740 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.765 ; 8.765 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.751 ; 8.751 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 8.916 ; 8.916 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.698 ; 8.698 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.650 ; 8.650 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.527 ; 8.527 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.662 ; 8.662 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.916 ; 8.916 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.347 ; 8.347 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.355 ; 8.355 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.220 ; 9.220 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.819 ; 8.819 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 9.165 ; 9.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.220 ; 9.220 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.861 ; 8.861 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 9.203 ; 9.203 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 9.192 ; 9.192 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 9.201 ; 9.201 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.509 ; 9.509 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.841 ; 8.841 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 9.370 ; 9.370 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.370 ; 9.370 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 9.509 ; 9.509 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 9.182 ; 9.182 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.532 ; 8.532 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 9.208 ; 9.208 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 8.345 ; 8.345 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.345 ; 8.345 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.366 ; 8.366 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.632 ; 8.632 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.361 ; 8.361 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.357 ; 8.357 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.375 ; 8.375 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.364 ; 8.364 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 7.883 ; 7.883 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.237 ; 8.237 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.189 ; 8.189 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.068 ; 8.068 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.202 ; 8.202 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.412 ; 8.412 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 7.883 ; 7.883 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 7.895 ; 7.895 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 8.205 ; 8.205 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.205 ; 8.205 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.542 ; 8.542 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.598 ; 8.598 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.247 ; 8.247 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.586 ; 8.586 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.565 ; 8.565 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.586 ; 8.586 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 8.134 ; 8.134 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.455 ; 8.455 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.987 ; 8.987 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.987 ; 8.987 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 9.125 ; 9.125 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.798 ; 8.798 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.134 ; 8.134 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.821 ; 8.821 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -0.085 ; -0.479        ;
+; Fenetre_Mesure:inst|latch_compteur ; 0.113  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Hold Summary                                     ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.690 ; -1.690        ;
+; Fenetre_Mesure:inst|latch_compteur ; 0.657  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.751 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.020 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.380 ; -22.380       ;
+; Fenetre_Mesure:inst|latch_compteur ; -0.500 ; -16.000       ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                  ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.085 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.118      ;
+; -0.084 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.117      ;
+; -0.063 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.098      ;
+; -0.057 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.090      ;
+; -0.056 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.089      ;
+; -0.055 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.090      ;
+; -0.055 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.085      ;
+; -0.054 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.089      ;
+; -0.054 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.086      ;
+; -0.054 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.084      ;
+; -0.053 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.085      ;
+; -0.051 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.081      ;
+; -0.050 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.080      ;
+; -0.049 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.082      ;
+; -0.049 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.082      ;
+; -0.047 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.077      ;
+; -0.047 ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.077      ;
+; -0.046 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.078      ;
+; -0.046 ; compteurN:inst10|count_m[1] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.078      ;
+; -0.044 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.079      ;
+; -0.044 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.076      ;
+; -0.043 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.075      ;
+; -0.043 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.073      ;
+; -0.043 ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.073      ;
+; -0.041 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.074      ;
+; -0.040 ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.073      ;
+; -0.038 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.071      ;
+; -0.037 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.070      ;
+; -0.036 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.071      ;
+; -0.036 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.068      ;
+; -0.036 ; compteurN:inst10|count_m[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.068      ;
+; -0.035 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.070      ;
+; -0.030 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.060      ;
+; -0.030 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.063      ;
+; -0.030 ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.063      ;
+; -0.021 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.053      ;
+; -0.020 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.052      ;
+; -0.013 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.045      ;
+; -0.013 ; compteurN:inst10|count_m[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.045      ;
+; -0.012 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.043      ;
+; -0.011 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.042      ;
+; -0.007 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.040      ;
+; -0.006 ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.041      ;
+; -0.006 ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.039      ;
+; -0.004 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.035      ;
+; -0.004 ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.035      ;
+; 0.012  ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.018      ;
+; 0.013  ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.017      ;
+; 0.013  ; compteurN:inst10|count_d[2] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.022      ;
+; 0.014  ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.016      ;
+; 0.020  ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.010      ;
+; 0.020  ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.010      ;
+; 0.026  ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.006      ;
+; 0.026  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.009      ;
+; 0.030  ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.002      ;
+; 0.032  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.001      ;
+; 0.032  ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.033  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 1.000      ;
+; 0.033  ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.998      ;
+; 0.034  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.001      ;
+; 0.035  ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.997      ;
+; 0.035  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 1.000      ;
+; 0.036  ; compteurN:inst10|count_c[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.996      ;
+; 0.039  ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.993      ;
+; 0.040  ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.992      ;
+; 0.040  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.993      ;
+; 0.040  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.993      ;
+; 0.040  ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.991      ;
+; 0.040  ; compteurN:inst10|count_u[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.991      ;
+; 0.040  ; compteurN:inst10|count_c[2] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.992      ;
+; 0.041  ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.991      ;
+; 0.048  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; compteurN:inst10|count_m[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.982      ;
+; 0.050  ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.980      ;
+; 0.051  ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.979      ;
+; 0.058  ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.972      ;
+; 0.058  ; compteurN:inst10|count_c[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.972      ;
+; 0.063  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.003      ; 0.972      ;
+; 0.066  ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.965      ;
+; 0.067  ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.964      ;
+; 0.069  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.964      ;
+; 0.070  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.963      ;
+; 0.071  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.003      ; 0.964      ;
+; 0.072  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.003      ; 0.963      ;
+; 0.074  ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.957      ;
+; 0.074  ; compteurN:inst10|count_u[0] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.957      ;
+; 0.077  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.956      ;
+; 0.077  ; compteurN:inst10|count_d[3] ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.956      ;
+; 0.081  ; compteurN:inst10|count_u[1] ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.952      ;
+; 0.082  ; compteurN:inst10|count_u[1] ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.082  ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.082  ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.001      ; 0.951      ;
+; 0.083  ; compteurN:inst10|count_d[0] ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.003      ; 0.952      ;
+; 0.093  ; compteurN:inst10|count_c[0] ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.939      ;
+; 0.098  ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.932      ;
+; 0.099  ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.931      ;
+; 0.100  ; compteurN:inst10|count_d[1] ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.932      ;
+; 0.100  ; compteurN:inst10|count_u[2] ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 0.930      ;
++--------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Fenetre_Mesure:inst|latch_compteur'                                                                                                        ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; 0.113 ; compteurN:inst10|count_d[1] ; latch_data:inst7|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.504      ;
+; 0.120 ; compteurN:inst10|count_c[0] ; latch_data:inst8|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.497      ;
+; 0.125 ; compteurN:inst10|count_u[0] ; latch_data:inst6|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.492      ;
+; 0.125 ; compteurN:inst10|count_d[2] ; latch_data:inst7|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.492      ;
+; 0.125 ; compteurN:inst10|count_c[1] ; latch_data:inst8|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.492      ;
+; 0.127 ; compteurN:inst10|count_d[0] ; latch_data:inst7|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.490      ;
+; 0.128 ; compteurN:inst10|count_m[1] ; latch_data:inst9|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.489      ;
+; 0.129 ; compteurN:inst10|count_c[2] ; latch_data:inst8|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.488      ;
+; 0.131 ; compteurN:inst10|count_m[2] ; latch_data:inst9|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.486      ;
+; 0.140 ; compteurN:inst10|count_m[0] ; latch_data:inst9|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.477      ;
+; 0.193 ; compteurN:inst10|count_u[2] ; latch_data:inst6|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.424      ;
+; 0.208 ; compteurN:inst10|count_m[3] ; latch_data:inst9|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.409      ;
+; 0.212 ; compteurN:inst10|count_c[3] ; latch_data:inst8|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.405      ;
+; 0.218 ; compteurN:inst10|count_d[3] ; latch_data:inst7|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.399      ;
+; 0.222 ; compteurN:inst10|count_u[3] ; latch_data:inst6|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.395      ;
+; 0.223 ; compteurN:inst10|count_u[1] ; latch_data:inst6|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 1.000        ; -0.415     ; 0.394      ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                       ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -1.690 ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; clk         ; 0.000        ; 1.764      ; 0.367      ;
+; -1.190 ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; Fenetre_Mesure:inst|latch_compteur ; clk         ; -0.500       ; 1.764      ; 0.367      ;
+; 0.215  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|count          ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|temp           ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Fenetre_Mesure:inst|reset_compteur ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_m[2]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_m[3]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; Fenetre_Mesure:inst|enable_temp    ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.251  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|temp           ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.324  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.325  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.331  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.332  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|count          ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.484      ;
+; 0.369  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|reset_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.378  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.445  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.597      ;
+; 0.449  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|latch_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.449  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.457  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_u[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.609      ;
+; 0.458  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.460  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.612      ;
+; 0.462  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_u[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.614      ;
+; 0.464  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.616      ;
+; 0.476  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.628      ;
+; 0.529  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|latch_compteur ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.681      ;
+; 0.558  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.710      ;
+; 0.568  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.578  ; Fenetre_Mesure:inst|temp           ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; -0.248     ; 0.482      ;
+; 0.580  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.732      ;
+; 0.600  ; compteurN:inst10|count_m[2]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.752      ;
+; 0.600  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.752      ;
+; 0.614  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.764      ;
+; 0.614  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.766      ;
+; 0.615  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.765      ;
+; 0.616  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.766      ;
+; 0.617  ; Fenetre_Mesure:inst|count          ; Fenetre_Mesure:inst|enable_temp    ; clk                                ; clk         ; 0.000        ; -0.248     ; 0.521      ;
+; 0.621  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.632  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.785      ;
+; 0.632  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.785      ;
+; 0.637  ; compteurN:inst10|count_m[0]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.648  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.650  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.654  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.657  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.809      ;
+; 0.674  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.826      ;
+; 0.681  ; compteurN:inst10|count_m[1]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.833      ;
+; 0.691  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.693  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.845      ;
+; 0.702  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.852      ;
+; 0.703  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.853      ;
+; 0.704  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.854      ;
+; 0.718  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 0.869      ;
+; 0.718  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 0.869      ;
+; 0.720  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.873      ;
+; 0.720  ; compteurN:inst10|count_u[0]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.873      ;
+; 0.722  ; compteurN:inst10|count_c[2]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.874      ;
+; 0.725  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 0.876      ;
+; 0.726  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; -0.001     ; 0.877      ;
+; 0.726  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.878      ;
+; 0.736  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.886      ;
+; 0.737  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.887      ;
+; 0.738  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.888      ;
+; 0.740  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.892      ;
+; 0.744  ; compteurN:inst10|count_u[1]        ; compteurN:inst10|count_d[3]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.894      ;
+; 0.746  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.898      ;
+; 0.749  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.901      ;
+; 0.754  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.907      ;
+; 0.754  ; compteurN:inst10|count_u[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.001      ; 0.907      ;
+; 0.755  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 0.910      ;
+; 0.755  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.907      ;
+; 0.756  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.906      ;
+; 0.757  ; compteurN:inst10|count_c[1]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.909      ;
+; 0.757  ; compteurN:inst10|count_d[2]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.909      ;
+; 0.758  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[2]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 0.913      ;
+; 0.760  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[0]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 0.915      ;
+; 0.762  ; compteurN:inst10|count_d[3]        ; compteurN:inst10|count_c[1]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 0.917      ;
+; 0.762  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.912      ;
+; 0.767  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[3]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.917      ;
+; 0.767  ; compteurN:inst10|count_c[3]        ; compteurN:inst10|count_m[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.917      ;
+; 0.776  ; compteurN:inst10|count_d[1]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.780  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.930      ;
+; 0.781  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[0]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.931      ;
+; 0.782  ; compteurN:inst10|count_u[2]        ; compteurN:inst10|count_d[1]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.932      ;
+; 0.792  ; compteurN:inst10|count_d[0]        ; compteurN:inst10|count_c[3]        ; clk                                ; clk         ; 0.000        ; 0.003      ; 0.947      ;
+; 0.794  ; compteurN:inst10|count_c[0]        ; compteurN:inst10|count_m[2]        ; clk                                ; clk         ; 0.000        ; -0.002     ; 0.944      ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Fenetre_Mesure:inst|latch_compteur'                                                                                                         ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+; 0.657 ; compteurN:inst10|count_u[1] ; latch_data:inst6|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.394      ;
+; 0.658 ; compteurN:inst10|count_u[3] ; latch_data:inst6|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.395      ;
+; 0.662 ; compteurN:inst10|count_d[3] ; latch_data:inst7|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.399      ;
+; 0.668 ; compteurN:inst10|count_c[3] ; latch_data:inst8|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.405      ;
+; 0.672 ; compteurN:inst10|count_m[3] ; latch_data:inst9|sortie[3] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.409      ;
+; 0.687 ; compteurN:inst10|count_u[2] ; latch_data:inst6|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.424      ;
+; 0.740 ; compteurN:inst10|count_m[0] ; latch_data:inst9|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.477      ;
+; 0.749 ; compteurN:inst10|count_m[2] ; latch_data:inst9|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.486      ;
+; 0.751 ; compteurN:inst10|count_c[2] ; latch_data:inst8|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.488      ;
+; 0.752 ; compteurN:inst10|count_m[1] ; latch_data:inst9|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.489      ;
+; 0.753 ; compteurN:inst10|count_d[0] ; latch_data:inst7|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.490      ;
+; 0.755 ; compteurN:inst10|count_u[0] ; latch_data:inst6|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.492      ;
+; 0.755 ; compteurN:inst10|count_d[2] ; latch_data:inst7|sortie[2] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.492      ;
+; 0.755 ; compteurN:inst10|count_c[1] ; latch_data:inst8|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.492      ;
+; 0.760 ; compteurN:inst10|count_c[0] ; latch_data:inst8|sortie[0] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.497      ;
+; 0.767 ; compteurN:inst10|count_d[1] ; latch_data:inst7|sortie[1] ; clk          ; Fenetre_Mesure:inst|latch_compteur ; 0.000        ; -0.415     ; 0.504      ;
++-------+-----------------------------+----------------------------+--------------+------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                                                     ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.751 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 1.000        ; 0.644      ; 0.925      ;
+; 0.751 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 1.000        ; 0.644      ; 0.925      ;
+; 0.751 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 1.000        ; 0.644      ; 0.925      ;
+; 0.751 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 1.000        ; 0.644      ; 0.925      ;
+; 0.761 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[0] ; clk          ; clk         ; 1.000        ; 0.646      ; 0.917      ;
+; 0.761 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[2] ; clk          ; clk         ; 1.000        ; 0.646      ; 0.917      ;
+; 0.761 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[3] ; clk          ; clk         ; 1.000        ; 0.646      ; 0.917      ;
+; 0.761 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[1] ; clk          ; clk         ; 1.000        ; 0.646      ; 0.917      ;
+; 0.765 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 1.000        ; 0.647      ; 0.914      ;
+; 0.765 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 1.000        ; 0.647      ; 0.914      ;
+; 0.765 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 1.000        ; 0.647      ; 0.914      ;
+; 0.765 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 1.000        ; 0.647      ; 0.914      ;
+; 0.860 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 1.000        ; 0.645      ; 0.817      ;
+; 0.860 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 1.000        ; 0.645      ; 0.817      ;
+; 0.860 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 1.000        ; 0.645      ; 0.817      ;
+; 0.860 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 1.000        ; 0.645      ; 0.817      ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                                                      ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.020 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[1] ; clk          ; clk         ; 0.000        ; 0.645      ; 0.817      ;
+; 0.020 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[2] ; clk          ; clk         ; 0.000        ; 0.645      ; 0.817      ;
+; 0.020 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[3] ; clk          ; clk         ; 0.000        ; 0.645      ; 0.817      ;
+; 0.020 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_m[0] ; clk          ; clk         ; 0.000        ; 0.645      ; 0.817      ;
+; 0.115 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[1] ; clk          ; clk         ; 0.000        ; 0.647      ; 0.914      ;
+; 0.115 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[2] ; clk          ; clk         ; 0.000        ; 0.647      ; 0.914      ;
+; 0.115 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[3] ; clk          ; clk         ; 0.000        ; 0.647      ; 0.914      ;
+; 0.115 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_c[0] ; clk          ; clk         ; 0.000        ; 0.647      ; 0.914      ;
+; 0.119 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[0] ; clk          ; clk         ; 0.000        ; 0.646      ; 0.917      ;
+; 0.119 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[2] ; clk          ; clk         ; 0.000        ; 0.646      ; 0.917      ;
+; 0.119 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[3] ; clk          ; clk         ; 0.000        ; 0.646      ; 0.917      ;
+; 0.119 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_u[1] ; clk          ; clk         ; 0.000        ; 0.646      ; 0.917      ;
+; 0.129 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[1] ; clk          ; clk         ; 0.000        ; 0.644      ; 0.925      ;
+; 0.129 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[2] ; clk          ; clk         ; 0.000        ; 0.644      ; 0.925      ;
+; 0.129 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[3] ; clk          ; clk         ; 0.000        ; 0.644      ; 0.925      ;
+; 0.129 ; Fenetre_Mesure:inst|reset_compteur ; compteurN:inst10|count_d[0] ; clk          ; clk         ; 0.000        ; 0.644      ; 0.925      ;
++-------+------------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|count          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|count          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|enable_temp    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|enable_temp    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|reset_compteur ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|reset_compteur ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Fenetre_Mesure:inst|temp           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Fenetre_Mesure:inst|temp           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_c[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_c[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_d[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_d[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_m[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_m[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; compteurN:inst10|count_u[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; compteurN:inst10|count_u[3]        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_c[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_c[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_d[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_d[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_m[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_m[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|count_u[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|count_u[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|clk_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|clk_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|count|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|count|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|enable_temp|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|enable_temp|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|latch_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|latch_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|reset_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|reset_compteur|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst|temp|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst|temp|clk                      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Fenetre_Mesure:inst|latch_compteur'                                                                               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst6|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst7|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst8|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; latch_data:inst9|sortie[3]           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst6|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst7|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst8|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst9|sortie[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Fenetre_Mesure:inst|latch_compteur ; Rise       ; inst|latch_compteur~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+------------------------------------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; measure   ; clk        ; 0.389 ; 0.389 ; Rise       ; clk             ;
+; reset     ; clk        ; 0.150 ; 0.150 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; measure   ; clk        ; -0.020 ; -0.020 ; Rise       ; clk             ;
+; reset     ; clk        ; -0.030 ; -0.030 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.478 ; 4.478 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.364 ; 4.364 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.387 ; 4.387 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.478 ; 4.478 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.383 ; 4.383 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.376 ; 4.376 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.390 ; 4.390 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.388 ; 4.388 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.418 ; 4.418 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.361 ; 4.361 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.314 ; 4.314 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.255 ; 4.255 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.327 ; 4.327 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.418 ; 4.418 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.224 ; 4.224 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.230 ; 4.230 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.555 ; 4.555 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.375 ; 4.375 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.509 ; 4.509 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.555 ; 4.555 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.417 ; 4.417 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.540 ; 4.540 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.530 ; 4.530 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.545 ; 4.545 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.661 ; 4.661 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.389 ; 4.389 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.661 ; 4.661 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.660 ; 4.660 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.648 ; 4.648 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.517 ; 4.517 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.287 ; 4.287 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.539 ; 4.539 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.233 ; 4.233 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.233 ; 4.233 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.256 ; 4.256 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.347 ; 4.347 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.252 ; 4.252 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.248 ; 4.248 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.259 ; 4.259 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.257 ; 4.257 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.069 ; 4.069 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.206 ; 4.206 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.159 ; 4.159 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.103 ; 4.103 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.172 ; 4.172 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.264 ; 4.264 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.069 ; 4.069 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.076 ; 4.076 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.165 ; 4.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.165 ; 4.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.288 ; 4.288 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.335 ; 4.335 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.207 ; 4.207 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.328 ; 4.328 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.309 ; 4.309 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.328 ; 4.328 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.133 ; 4.133 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.253 ; 4.253 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.527 ; 4.527 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.529 ; 4.529 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.510 ; 4.510 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.385 ; 4.385 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.133 ; 4.133 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.408 ; 4.408 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                               ;
++-------------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                               ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                    ; -1.847  ; -2.661 ; 0.652    ; -0.192  ; -1.631              ;
+;  Fenetre_Mesure:inst|latch_compteur ; -0.988  ; 0.657  ; N/A      ; N/A     ; -0.611              ;
+;  clk                                ; -1.847  ; -2.661 ; 0.652    ; -0.192  ; -1.631              ;
+; Design-wide TNS                     ; -37.662 ; -2.661 ; 0.0      ; -0.768  ; -46.845             ;
+;  Fenetre_Mesure:inst|latch_compteur ; -14.615 ; 0.000  ; N/A      ; N/A     ; -19.552             ;
+;  clk                                ; -23.047 ; -2.661 ; 0.000    ; -0.768  ; -27.293             ;
++-------------------------------------+---------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; measure   ; clk        ; 1.940 ; 1.940 ; Rise       ; clk             ;
+; reset     ; clk        ; 1.498 ; 1.498 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; measure   ; clk        ; -0.020 ; -0.020 ; Rise       ; clk             ;
+; reset     ; clk        ; -0.030 ; -0.030 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.021 ; 9.021 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.735 ; 8.735 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.755 ; 8.755 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.021 ; 9.021 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.751 ; 8.751 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.740 ; 8.740 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.765 ; 8.765 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.751 ; 8.751 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 8.916 ; 8.916 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.698 ; 8.698 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 8.650 ; 8.650 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 8.527 ; 8.527 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.662 ; 8.662 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 8.916 ; 8.916 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.347 ; 8.347 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 8.355 ; 8.355 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.220 ; 9.220 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.819 ; 8.819 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 9.165 ; 9.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.220 ; 9.220 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 8.861 ; 8.861 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 9.203 ; 9.203 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 9.192 ; 9.192 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 9.201 ; 9.201 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 9.509 ; 9.509 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 8.841 ; 8.841 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 9.370 ; 9.370 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 9.370 ; 9.370 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 9.509 ; 9.509 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 9.182 ; 9.182 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 8.532 ; 8.532 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 9.208 ; 9.208 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; SEG1[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.233 ; 4.233 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.233 ; 4.233 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.256 ; 4.256 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.347 ; 4.347 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.252 ; 4.252 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.248 ; 4.248 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.259 ; 4.259 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG1[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.257 ; 4.257 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG2[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.069 ; 4.069 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.206 ; 4.206 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.159 ; 4.159 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.103 ; 4.103 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.172 ; 4.172 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.264 ; 4.264 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.069 ; 4.069 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG2[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.076 ; 4.076 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG3[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.165 ; 4.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.165 ; 4.165 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.288 ; 4.288 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.335 ; 4.335 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.207 ; 4.207 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.328 ; 4.328 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.309 ; 4.309 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG3[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.328 ; 4.328 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+; SEG4[*]   ; Fenetre_Mesure:inst|latch_compteur ; 4.133 ; 4.133 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[0]  ; Fenetre_Mesure:inst|latch_compteur ; 4.253 ; 4.253 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[1]  ; Fenetre_Mesure:inst|latch_compteur ; 4.527 ; 4.527 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[2]  ; Fenetre_Mesure:inst|latch_compteur ; 4.529 ; 4.529 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[3]  ; Fenetre_Mesure:inst|latch_compteur ; 4.510 ; 4.510 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[4]  ; Fenetre_Mesure:inst|latch_compteur ; 4.385 ; 4.385 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[5]  ; Fenetre_Mesure:inst|latch_compteur ; 4.133 ; 4.133 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
+;  SEG4[6]  ; Fenetre_Mesure:inst|latch_compteur ; 4.408 ; 4.408 ; Rise       ; Fenetre_Mesure:inst|latch_compteur ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                     ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; clk                                ; clk                                ; 231      ; 0        ; 0        ; 0        ;
+; Fenetre_Mesure:inst|latch_compteur ; clk                                ; 1        ; 1        ; 0        ; 0        ;
+; clk                                ; Fenetre_Mesure:inst|latch_compteur ; 16       ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                      ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; clk                                ; clk                                ; 231      ; 0        ; 0        ; 0        ;
+; Fenetre_Mesure:inst|latch_compteur ; clk                                ; 1        ; 1        ; 0        ; 0        ;
+; clk                                ; Fenetre_Mesure:inst|latch_compteur ; 16       ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 112   ; 112  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 26 13:31:44 2021
+Info: Command: quartus_sta TP23 -c TP23
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'TP23.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Fenetre_Mesure:inst|latch_compteur Fenetre_Mesure:inst|latch_compteur
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.847
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.847       -23.047 clk 
+    Info (332119):    -0.988       -14.615 Fenetre_Mesure:inst|latch_compteur 
+Info (332146): Worst-case hold slack is -2.661
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.661        -2.661 clk 
+    Info (332119):     1.559         0.000 Fenetre_Mesure:inst|latch_compteur 
+Info (332146): Worst-case recovery slack is 0.652
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.652         0.000 clk 
+Info (332146): Worst-case removal slack is -0.192
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.192        -0.768 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -27.293 clk 
+    Info (332119):    -0.611       -19.552 Fenetre_Mesure:inst|latch_compteur 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.085
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.085        -0.479 clk 
+    Info (332119):     0.113         0.000 Fenetre_Mesure:inst|latch_compteur 
+Info (332146): Worst-case hold slack is -1.690
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.690        -1.690 clk 
+    Info (332119):     0.657         0.000 Fenetre_Mesure:inst|latch_compteur 
+Info (332146): Worst-case recovery slack is 0.751
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.751         0.000 clk 
+Info (332146): Worst-case removal slack is 0.020
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.020         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -22.380 clk 
+    Info (332119):    -0.500       -16.000 Fenetre_Mesure:inst|latch_compteur 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4527 megabytes
+    Info: Processing ended: Tue Jan 26 13:31:46 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

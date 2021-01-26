@@ -6,15 +6,14 @@ SEG1[3] <= binaire_7seg:inst2.SEG[3]
 SEG1[4] <= binaire_7seg:inst2.SEG[4]
 SEG1[5] <= binaire_7seg:inst2.SEG[5]
 SEG1[6] <= binaire_7seg:inst2.SEG[6]
-clk => diviseur:inst17.clk
-clk => diviseur:inst15.clk
-clk => diviseur:inst14.clk
-clk => lpm_mux0:inst16.data0
-reset => diviseur:inst17.reset
-reset => diviseur:inst15.reset
-reset => diviseur:inst14.reset
+clk => diviseur:inst24.clk
+clk => diviseur:inst21.clk
+clk => diviseur:inst22.clk
+clk => lpm_mux0:inst20.data0
+calibre[0] => lpm_mux0:inst20.sel[0]
+calibre[1] => lpm_mux0:inst20.sel[1]
 reset => Fenetre_Mesure:inst.reset
-measure => Fenetre_Mesure:inst.measure
+measure => diviseur:inst14.clk
 SEG2[0] <= binaire_7seg:inst3.SEG[0]
 SEG2[1] <= binaire_7seg:inst3.SEG[1]
 SEG2[2] <= binaire_7seg:inst3.SEG[2]
@@ -113,7 +112,7 @@ enable_compteur <= enable_compteur~reg0.DB_MAX_OUTPUT_PORT_TYPE
 latch_compteur <= latch_compteur~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TP23|lpm_mux0:inst16
+|TP23|lpm_mux0:inst20
 data0 => LPM_MUX:LPM_MUX_component.DATA[0][0]
 data1 => LPM_MUX:LPM_MUX_component.DATA[1][0]
 data2 => LPM_MUX:LPM_MUX_component.DATA[2][0]
@@ -123,7 +122,7 @@ sel[1] => LPM_MUX:LPM_MUX_component.SEL[1]
 result <= LPM_MUX:LPM_MUX_component.RESULT[0]
 
 
-|TP23|lpm_mux0:inst16|LPM_MUX:LPM_MUX_component
+|TP23|lpm_mux0:inst20|LPM_MUX:LPM_MUX_component
 data[0][0] => mux_33e:auto_generated.data[0]
 data[1][0] => mux_33e:auto_generated.data[1]
 data[2][0] => mux_33e:auto_generated.data[2]
@@ -136,7 +135,7 @@ clken => ~NO_FANOUT~
 result[0] <= mux_33e:auto_generated.result[0]
 
 
-|TP23|lpm_mux0:inst16|LPM_MUX:LPM_MUX_component|mux_33e:auto_generated
+|TP23|lpm_mux0:inst20|LPM_MUX:LPM_MUX_component|mux_33e:auto_generated
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -156,7 +155,7 @@ sel[1] => _.IN0
 sel[1] => _.IN0
 
 
-|TP23|diviseur:inst17
+|TP23|diviseur:inst24
 clk => div.CLK
 clk => temp[0].CLK
 clk => temp[1].CLK
@@ -190,11 +189,10 @@ clk => temp[28].CLK
 clk => temp[29].CLK
 clk => temp[30].CLK
 clk => temp[31].CLK
-reset => ~NO_FANOUT~
 clk_div <= div.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TP23|diviseur:inst15
+|TP23|diviseur:inst21
 clk => div.CLK
 clk => temp[0].CLK
 clk => temp[1].CLK
@@ -228,7 +226,43 @@ clk => temp[28].CLK
 clk => temp[29].CLK
 clk => temp[30].CLK
 clk => temp[31].CLK
-reset => ~NO_FANOUT~
+clk_div <= div.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TP23|diviseur:inst22
+clk => div.CLK
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+clk => temp[4].CLK
+clk => temp[5].CLK
+clk => temp[6].CLK
+clk => temp[7].CLK
+clk => temp[8].CLK
+clk => temp[9].CLK
+clk => temp[10].CLK
+clk => temp[11].CLK
+clk => temp[12].CLK
+clk => temp[13].CLK
+clk => temp[14].CLK
+clk => temp[15].CLK
+clk => temp[16].CLK
+clk => temp[17].CLK
+clk => temp[18].CLK
+clk => temp[19].CLK
+clk => temp[20].CLK
+clk => temp[21].CLK
+clk => temp[22].CLK
+clk => temp[23].CLK
+clk => temp[24].CLK
+clk => temp[25].CLK
+clk => temp[26].CLK
+clk => temp[27].CLK
+clk => temp[28].CLK
+clk => temp[29].CLK
+clk => temp[30].CLK
+clk => temp[31].CLK
 clk_div <= div.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -266,7 +300,6 @@ clk => temp[28].CLK
 clk => temp[29].CLK
 clk => temp[30].CLK
 clk => temp[31].CLK
-reset => ~NO_FANOUT~
 clk_div <= div.DB_MAX_OUTPUT_PORT_TYPE
 
 

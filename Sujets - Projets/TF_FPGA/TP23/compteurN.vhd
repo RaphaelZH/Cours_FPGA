@@ -1,6 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_signed.all;
+USE ieee.std_logic_unsigned.all;
 
 ENTITY compteurN IS
 	PORT
@@ -31,7 +31,7 @@ millier      <= count_m;
 
 	PROCESS(clk, reset)
 	BEGIN
-		IF reset    = '1' THEN
+		IF reset = '1' THEN
 			count_u <= (OTHERS => '0');
 			count_d <= (OTHERS => '0');
 			count_c <= (OTHERS => '0');
@@ -41,14 +41,17 @@ millier      <= count_m;
 			IF count_u = "1001" THEN
 				count_u <= "0000";
 				count_d <= count_d + 1;
-			ELSIF count_d = "1001" THEN
+			IF count_d = "1001" THEN
 				count_d <= "0000";
 				count_c <= count_c + 1;
-			ELSIF count_c = "1001" THEN
+			IF count_c = "1001" THEN
 				count_c <= "0000";
 				count_m <= count_m + 1;
-			ELSIF count_m = "1001" THEN
+			IF count_m = "1001" THEN
 				count_m <= "0000";
+			END IF;
+			END IF;
+			END IF;
 			END IF;
 		END IF;
 	END PROCESS;

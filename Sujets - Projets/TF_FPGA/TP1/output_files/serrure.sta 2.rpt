@@ -1,0 +1,720 @@
+TimeQuest Timing Analyzer report for serrure
+Wed Jan 20 09:11:52 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; serrure                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; col1       ; LedR        ; 11.029 ; 11.029 ; 11.029 ; 11.029 ;
+; col1       ; LedV        ; 11.409 ; 11.409 ; 11.409 ; 11.409 ;
+; col1       ; sortie[0]   ; 12.021 ; 12.021 ; 12.021 ; 12.021 ;
+; col1       ; sortie[1]   ; 10.401 ; 10.401 ; 10.401 ; 10.401 ;
+; col1       ; sortie[2]   ; 11.963 ; 11.963 ; 11.963 ; 11.963 ;
+; col1       ; sortie[3]   ; 12.032 ; 12.032 ; 12.032 ; 12.032 ;
+; col1       ; sortie[4]   ; 12.377 ; 12.377 ; 12.377 ; 12.377 ;
+; col1       ; sortie[5]   ; 12.242 ; 12.242 ; 12.242 ; 12.242 ;
+; col1       ; sortie[6]   ; 10.833 ; 10.833 ; 10.833 ; 10.833 ;
+; col2       ; LedR        ; 11.981 ; 12.054 ; 12.054 ; 11.981 ;
+; col2       ; LedV        ; 12.434 ; 12.361 ; 12.361 ; 12.434 ;
+; col2       ; sortie[0]   ; 13.120 ; 13.120 ; 13.120 ; 13.120 ;
+; col2       ; sortie[1]   ; 11.536 ; 11.536 ; 11.536 ; 11.536 ;
+; col2       ; sortie[2]   ; 13.110 ; 13.110 ; 13.110 ; 13.110 ;
+; col2       ; sortie[3]   ; 13.164 ; 13.164 ; 13.164 ; 13.164 ;
+; col2       ; sortie[4]   ; 13.472 ; 13.402 ; 13.402 ; 13.472 ;
+; col2       ; sortie[5]   ; 13.349 ; 13.349 ; 13.349 ; 13.349 ;
+; col2       ; sortie[6]   ; 11.965 ; 11.965 ; 11.965 ; 11.965 ;
+; col3       ; LedR        ; 12.216 ; 11.794 ; 11.794 ; 12.216 ;
+; col3       ; LedV        ; 12.174 ; 12.596 ; 12.596 ; 12.174 ;
+; col3       ; sortie[0]   ; 13.208 ; 13.208 ; 13.208 ; 13.208 ;
+; col3       ; sortie[1]   ; 11.268 ; 11.588 ; 11.588 ; 11.268 ;
+; col3       ; sortie[2]   ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; col3       ; sortie[3]   ; 13.219 ; 13.219 ; 13.219 ; 13.219 ;
+; col3       ; sortie[4]   ; 13.564 ; 13.564 ; 13.564 ; 13.564 ;
+; col3       ; sortie[5]   ; 13.429 ; 13.429 ; 13.429 ; 13.429 ;
+; col3       ; sortie[6]   ; 12.020 ; 12.020 ; 12.020 ; 12.020 ;
+; col4       ; LedR        ; 12.409 ; 12.409 ; 12.409 ; 12.409 ;
+; col4       ; LedV        ; 12.789 ; 12.789 ; 12.789 ; 12.789 ;
+; col4       ; sortie[0]   ; 13.463 ; 13.463 ; 13.463 ; 13.463 ;
+; col4       ; sortie[1]   ; 11.883 ; 11.883 ; 11.883 ; 11.883 ;
+; col4       ; sortie[2]   ; 13.456 ; 13.456 ; 13.456 ; 13.456 ;
+; col4       ; sortie[3]   ; 13.508 ; 13.508 ; 13.508 ; 13.508 ;
+; col4       ; sortie[4]   ; 13.830 ; 13.830 ; 13.830 ; 13.830 ;
+; col4       ; sortie[5]   ; 13.728 ; 13.728 ; 13.728 ; 13.728 ;
+; col4       ; sortie[6]   ; 12.313 ; 12.313 ; 12.313 ; 12.313 ;
+; lig1       ; LedR        ; 12.451 ; 12.451 ; 12.451 ; 12.451 ;
+; lig1       ; LedV        ; 12.831 ; 12.831 ; 12.831 ; 12.831 ;
+; lig1       ; sortie[0]   ; 13.517 ; 13.517 ; 13.517 ; 13.517 ;
+; lig1       ; sortie[1]   ; 11.933 ; 11.933 ; 11.933 ; 11.933 ;
+; lig1       ; sortie[2]   ; 13.507 ; 13.507 ; 13.507 ; 13.507 ;
+; lig1       ; sortie[3]   ; 13.561 ; 13.561 ; 13.561 ; 13.561 ;
+; lig1       ; sortie[4]   ; 13.869 ; 13.869 ; 13.869 ; 13.869 ;
+; lig1       ; sortie[5]   ; 13.746 ; 13.746 ; 13.746 ; 13.746 ;
+; lig1       ; sortie[6]   ; 12.362 ; 12.362 ; 12.362 ; 12.362 ;
+; lig2       ; LedR        ; 10.948 ; 11.026 ; 11.026 ; 10.948 ;
+; lig2       ; LedV        ; 11.406 ; 11.328 ; 11.328 ; 11.406 ;
+; lig2       ; sortie[0]   ; 12.080 ; 12.080 ; 12.080 ; 12.080 ;
+; lig2       ; sortie[1]   ; 10.500 ; 10.500 ; 10.500 ; 10.500 ;
+; lig2       ; sortie[2]   ; 11.911 ; 12.073 ; 12.073 ; 11.911 ;
+; lig2       ; sortie[3]   ; 12.125 ; 12.125 ; 12.125 ; 12.125 ;
+; lig2       ; sortie[4]   ; 12.447 ; 12.296 ; 12.296 ; 12.447 ;
+; lig2       ; sortie[5]   ; 12.345 ; 12.345 ; 12.345 ; 12.345 ;
+; lig2       ; sortie[6]   ; 10.930 ; 10.930 ; 10.930 ; 10.930 ;
+; lig3       ; LedR        ; 11.294 ; 11.294 ; 11.294 ; 11.294 ;
+; lig3       ; LedV        ; 11.674 ; 11.674 ; 11.674 ; 11.674 ;
+; lig3       ; sortie[0]   ; 12.286 ; 12.286 ; 12.286 ; 12.286 ;
+; lig3       ; sortie[1]   ; 10.682 ; 10.682 ; 10.682 ; 10.682 ;
+; lig3       ; sortie[2]   ; 12.256 ; 12.256 ; 12.256 ; 12.256 ;
+; lig3       ; sortie[3]   ; 12.310 ; 12.310 ; 12.310 ; 12.310 ;
+; lig3       ; sortie[4]   ; 12.642 ; 12.642 ; 12.642 ; 12.642 ;
+; lig3       ; sortie[5]   ; 12.507 ; 12.507 ; 12.507 ; 12.507 ;
+; lig3       ; sortie[6]   ; 11.111 ; 11.111 ; 11.111 ; 11.111 ;
+; lig4       ; LedR        ; 11.195 ; 11.195 ; 11.195 ; 11.195 ;
+; lig4       ; LedV        ; 11.575 ; 11.575 ; 11.575 ; 11.575 ;
+; lig4       ; sortie[0]   ; 12.261 ; 12.261 ; 12.261 ; 12.261 ;
+; lig4       ; sortie[1]   ; 10.677 ; 10.677 ; 10.677 ; 10.677 ;
+; lig4       ; sortie[2]   ; 12.251 ; 12.251 ; 12.251 ; 12.251 ;
+; lig4       ; sortie[3]   ; 12.305 ; 12.305 ; 12.305 ; 12.305 ;
+; lig4       ; sortie[4]   ; 12.613 ; 12.613 ; 12.613 ; 12.613 ;
+; lig4       ; sortie[5]   ; 12.490 ; 12.490 ; 12.490 ; 12.490 ;
+; lig4       ; sortie[6]   ; 11.106 ; 11.106 ; 11.106 ; 11.106 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; col1       ; LedR        ; 8.767  ; 8.767  ; 8.767  ; 8.767  ;
+; col1       ; LedV        ; 9.147  ; 9.147  ; 9.147  ; 9.147  ;
+; col1       ; sortie[0]   ; 9.759  ; 9.759  ; 9.759  ; 9.759  ;
+; col1       ; sortie[1]   ; 8.140  ; 8.140  ; 8.140  ; 8.140  ;
+; col1       ; sortie[2]   ; 9.699  ; 9.699  ; 9.699  ; 9.699  ;
+; col1       ; sortie[3]   ; 9.772  ; 9.772  ; 9.772  ; 9.772  ;
+; col1       ; sortie[4]   ; 10.115 ; 10.115 ; 10.115 ; 10.115 ;
+; col1       ; sortie[5]   ; 9.982  ; 9.982  ; 9.982  ; 9.982  ;
+; col1       ; sortie[6]   ; 8.572  ; 8.572  ; 8.572  ; 8.572  ;
+; col2       ; LedR        ; 10.787 ; 9.942  ; 9.942  ; 10.787 ;
+; col2       ; LedV        ; 10.322 ; 11.167 ; 11.167 ; 10.322 ;
+; col2       ; sortie[0]   ; 10.996 ; 10.996 ; 10.996 ; 10.996 ;
+; col2       ; sortie[1]   ; 9.416  ; 9.416  ; 9.416  ; 9.416  ;
+; col2       ; sortie[2]   ; 11.719 ; 10.989 ; 10.989 ; 11.719 ;
+; col2       ; sortie[3]   ; 11.041 ; 11.041 ; 11.041 ; 11.041 ;
+; col2       ; sortie[4]   ; 11.363 ; 12.135 ; 12.135 ; 11.363 ;
+; col2       ; sortie[5]   ; 11.261 ; 11.261 ; 11.261 ; 11.261 ;
+; col2       ; sortie[6]   ; 9.846  ; 9.846  ; 9.846  ; 9.846  ;
+; col3       ; LedR        ; 10.285 ; 10.122 ; 10.122 ; 10.285 ;
+; col3       ; LedV        ; 10.502 ; 10.665 ; 10.665 ; 10.502 ;
+; col3       ; sortie[0]   ; 11.188 ; 11.188 ; 11.188 ; 11.188 ;
+; col3       ; sortie[1]   ; 9.604  ; 9.604  ; 9.604  ; 9.604  ;
+; col3       ; sortie[2]   ; 11.178 ; 11.178 ; 11.178 ; 11.178 ;
+; col3       ; sortie[3]   ; 11.232 ; 11.232 ; 11.232 ; 11.232 ;
+; col3       ; sortie[4]   ; 11.540 ; 11.633 ; 11.633 ; 11.540 ;
+; col3       ; sortie[5]   ; 11.417 ; 11.417 ; 11.417 ; 11.417 ;
+; col3       ; sortie[6]   ; 10.033 ; 10.033 ; 10.033 ; 10.033 ;
+; col4       ; LedR        ; 9.988  ; 9.908  ; 9.908  ; 9.988  ;
+; col4       ; LedV        ; 10.288 ; 10.368 ; 10.368 ; 10.288 ;
+; col4       ; sortie[0]   ; 10.900 ; 10.900 ; 10.900 ; 10.900 ;
+; col4       ; sortie[1]   ; 9.280  ; 9.383  ; 9.383  ; 9.280  ;
+; col4       ; sortie[2]   ; 10.842 ; 10.842 ; 10.842 ; 10.842 ;
+; col4       ; sortie[3]   ; 10.911 ; 10.911 ; 10.911 ; 10.911 ;
+; col4       ; sortie[4]   ; 11.256 ; 11.256 ; 11.256 ; 11.256 ;
+; col4       ; sortie[5]   ; 11.121 ; 11.121 ; 11.121 ; 11.121 ;
+; col4       ; sortie[6]   ; 9.712  ; 9.712  ; 9.712  ; 9.712  ;
+; lig1       ; LedR        ; 11.123 ; 11.071 ; 11.071 ; 11.123 ;
+; lig1       ; LedV        ; 11.451 ; 11.503 ; 11.503 ; 11.451 ;
+; lig1       ; sortie[0]   ; 12.115 ; 12.115 ; 12.115 ; 12.115 ;
+; lig1       ; sortie[1]   ; 10.496 ; 10.496 ; 10.496 ; 10.496 ;
+; lig1       ; sortie[2]   ; 12.055 ; 12.055 ; 12.055 ; 12.055 ;
+; lig1       ; sortie[3]   ; 12.128 ; 12.128 ; 12.128 ; 12.128 ;
+; lig1       ; sortie[4]   ; 12.471 ; 12.471 ; 12.471 ; 12.471 ;
+; lig1       ; sortie[5]   ; 12.338 ; 12.338 ; 12.338 ; 12.338 ;
+; lig1       ; sortie[6]   ; 10.928 ; 10.928 ; 10.928 ; 10.928 ;
+; lig2       ; LedR        ; 9.818  ; 9.685  ; 9.685  ; 9.818  ;
+; lig2       ; LedV        ; 10.065 ; 10.198 ; 10.198 ; 10.065 ;
+; lig2       ; sortie[0]   ; 10.739 ; 10.739 ; 10.739 ; 10.739 ;
+; lig2       ; sortie[1]   ; 9.159  ; 9.159  ; 9.159  ; 9.159  ;
+; lig2       ; sortie[2]   ; 10.750 ; 10.732 ; 10.732 ; 10.750 ;
+; lig2       ; sortie[3]   ; 10.784 ; 10.784 ; 10.784 ; 10.784 ;
+; lig2       ; sortie[4]   ; 11.106 ; 11.166 ; 11.166 ; 11.106 ;
+; lig2       ; sortie[5]   ; 11.004 ; 11.004 ; 11.004 ; 11.004 ;
+; lig2       ; sortie[6]   ; 9.589  ; 9.589  ; 9.589  ; 9.589  ;
+; lig3       ; LedR        ; 9.732  ; 9.654  ; 9.654  ; 9.732  ;
+; lig3       ; LedV        ; 10.034 ; 10.112 ; 10.112 ; 10.034 ;
+; lig3       ; sortie[0]   ; 10.708 ; 10.708 ; 10.708 ; 10.708 ;
+; lig3       ; sortie[1]   ; 9.128  ; 9.128  ; 9.128  ; 9.128  ;
+; lig3       ; sortie[2]   ; 10.702 ; 10.701 ; 10.701 ; 10.702 ;
+; lig3       ; sortie[3]   ; 10.753 ; 10.753 ; 10.753 ; 10.753 ;
+; lig3       ; sortie[4]   ; 11.075 ; 11.118 ; 11.118 ; 11.075 ;
+; lig3       ; sortie[5]   ; 10.973 ; 10.973 ; 10.973 ; 10.973 ;
+; lig3       ; sortie[6]   ; 9.558  ; 9.558  ; 9.558  ; 9.558  ;
+; lig4       ; LedR        ; 9.839  ; 9.643  ; 9.643  ; 9.839  ;
+; lig4       ; LedV        ; 10.023 ; 10.219 ; 10.219 ; 10.023 ;
+; lig4       ; sortie[0]   ; 10.697 ; 10.697 ; 10.697 ; 10.697 ;
+; lig4       ; sortie[1]   ; 9.117  ; 9.117  ; 9.117  ; 9.117  ;
+; lig4       ; sortie[2]   ; 10.771 ; 10.690 ; 10.690 ; 10.771 ;
+; lig4       ; sortie[3]   ; 10.742 ; 10.742 ; 10.742 ; 10.742 ;
+; lig4       ; sortie[4]   ; 11.064 ; 11.187 ; 11.187 ; 11.064 ;
+; lig4       ; sortie[5]   ; 10.962 ; 10.962 ; 10.962 ; 10.962 ;
+; lig4       ; sortie[6]   ; 9.547  ; 9.547  ; 9.547  ; 9.547  ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; col1       ; LedR        ; 4.664 ; 4.664 ; 4.664 ; 4.664 ;
+; col1       ; LedV        ; 4.827 ; 4.827 ; 4.827 ; 4.827 ;
+; col1       ; sortie[0]   ; 5.025 ; 5.025 ; 5.025 ; 5.025 ;
+; col1       ; sortie[1]   ; 4.504 ; 4.504 ; 4.504 ; 4.504 ;
+; col1       ; sortie[2]   ; 5.161 ; 5.161 ; 5.161 ; 5.161 ;
+; col1       ; sortie[3]   ; 5.045 ; 5.045 ; 5.045 ; 5.045 ;
+; col1       ; sortie[4]   ; 5.188 ; 5.188 ; 5.188 ; 5.188 ;
+; col1       ; sortie[5]   ; 5.143 ; 5.143 ; 5.143 ; 5.143 ;
+; col1       ; sortie[6]   ; 4.697 ; 4.697 ; 4.697 ; 4.697 ;
+; col2       ; LedR        ; 5.137 ; 5.184 ; 5.184 ; 5.137 ;
+; col2       ; LedV        ; 5.347 ; 5.300 ; 5.300 ; 5.347 ;
+; col2       ; sortie[0]   ; 5.578 ; 5.578 ; 5.578 ; 5.578 ;
+; col2       ; sortie[1]   ; 5.057 ; 5.057 ; 5.057 ; 5.057 ;
+; col2       ; sortie[2]   ; 5.719 ; 5.719 ; 5.719 ; 5.719 ;
+; col2       ; sortie[3]   ; 5.595 ; 5.595 ; 5.595 ; 5.595 ;
+; col2       ; sortie[4]   ; 5.745 ; 5.699 ; 5.699 ; 5.745 ;
+; col2       ; sortie[5]   ; 5.701 ; 5.701 ; 5.701 ; 5.701 ;
+; col2       ; sortie[6]   ; 5.247 ; 5.247 ; 5.247 ; 5.247 ;
+; col3       ; LedR        ; 5.213 ; 5.051 ; 5.051 ; 5.213 ;
+; col3       ; LedV        ; 5.214 ; 5.376 ; 5.376 ; 5.214 ;
+; col3       ; sortie[0]   ; 5.574 ; 5.574 ; 5.574 ; 5.574 ;
+; col3       ; sortie[1]   ; 4.924 ; 5.053 ; 5.053 ; 4.924 ;
+; col3       ; sortie[2]   ; 5.699 ; 5.699 ; 5.699 ; 5.699 ;
+; col3       ; sortie[3]   ; 5.594 ; 5.594 ; 5.594 ; 5.594 ;
+; col3       ; sortie[4]   ; 5.737 ; 5.737 ; 5.737 ; 5.737 ;
+; col3       ; sortie[5]   ; 5.690 ; 5.690 ; 5.690 ; 5.690 ;
+; col3       ; sortie[6]   ; 5.246 ; 5.246 ; 5.246 ; 5.246 ;
+; col4       ; LedR        ; 5.289 ; 5.289 ; 5.289 ; 5.289 ;
+; col4       ; LedV        ; 5.452 ; 5.452 ; 5.452 ; 5.452 ;
+; col4       ; sortie[0]   ; 5.683 ; 5.683 ; 5.683 ; 5.683 ;
+; col4       ; sortie[1]   ; 5.162 ; 5.162 ; 5.162 ; 5.162 ;
+; col4       ; sortie[2]   ; 5.827 ; 5.827 ; 5.827 ; 5.827 ;
+; col4       ; sortie[3]   ; 5.700 ; 5.700 ; 5.700 ; 5.700 ;
+; col4       ; sortie[4]   ; 5.851 ; 5.851 ; 5.851 ; 5.851 ;
+; col4       ; sortie[5]   ; 5.807 ; 5.807 ; 5.807 ; 5.807 ;
+; col4       ; sortie[6]   ; 5.352 ; 5.352 ; 5.352 ; 5.352 ;
+; lig1       ; LedR        ; 5.364 ; 5.364 ; 5.364 ; 5.364 ;
+; lig1       ; LedV        ; 5.527 ; 5.527 ; 5.527 ; 5.527 ;
+; lig1       ; sortie[0]   ; 5.758 ; 5.758 ; 5.758 ; 5.758 ;
+; lig1       ; sortie[1]   ; 5.237 ; 5.237 ; 5.237 ; 5.237 ;
+; lig1       ; sortie[2]   ; 5.899 ; 5.899 ; 5.899 ; 5.899 ;
+; lig1       ; sortie[3]   ; 5.775 ; 5.775 ; 5.775 ; 5.775 ;
+; lig1       ; sortie[4]   ; 5.925 ; 5.925 ; 5.925 ; 5.925 ;
+; lig1       ; sortie[5]   ; 5.881 ; 5.881 ; 5.881 ; 5.881 ;
+; lig1       ; sortie[6]   ; 5.427 ; 5.427 ; 5.427 ; 5.427 ;
+; lig2       ; LedR        ; 4.655 ; 4.655 ; 4.655 ; 4.655 ;
+; lig2       ; LedV        ; 4.818 ; 4.818 ; 4.818 ; 4.818 ;
+; lig2       ; sortie[0]   ; 5.042 ; 5.042 ; 5.042 ; 5.042 ;
+; lig2       ; sortie[1]   ; 4.521 ; 4.521 ; 4.521 ; 4.521 ;
+; lig2       ; sortie[2]   ; 5.175 ; 5.186 ; 5.186 ; 5.175 ;
+; lig2       ; sortie[3]   ; 5.059 ; 5.059 ; 5.059 ; 5.059 ;
+; lig2       ; sortie[4]   ; 5.210 ; 5.201 ; 5.201 ; 5.210 ;
+; lig2       ; sortie[5]   ; 5.166 ; 5.166 ; 5.166 ; 5.166 ;
+; lig2       ; sortie[6]   ; 4.711 ; 4.711 ; 4.711 ; 4.711 ;
+; lig3       ; LedR        ; 4.774 ; 4.774 ; 4.774 ; 4.774 ;
+; lig3       ; LedV        ; 4.937 ; 4.937 ; 4.937 ; 4.937 ;
+; lig3       ; sortie[0]   ; 5.152 ; 5.152 ; 5.152 ; 5.152 ;
+; lig3       ; sortie[1]   ; 4.631 ; 4.631 ; 4.631 ; 4.631 ;
+; lig3       ; sortie[2]   ; 5.293 ; 5.293 ; 5.293 ; 5.293 ;
+; lig3       ; sortie[3]   ; 5.169 ; 5.169 ; 5.169 ; 5.169 ;
+; lig3       ; sortie[4]   ; 5.319 ; 5.319 ; 5.319 ; 5.319 ;
+; lig3       ; sortie[5]   ; 5.275 ; 5.275 ; 5.275 ; 5.275 ;
+; lig3       ; sortie[6]   ; 4.821 ; 4.821 ; 4.821 ; 4.821 ;
+; lig4       ; LedR        ; 4.747 ; 4.747 ; 4.747 ; 4.747 ;
+; lig4       ; LedV        ; 4.910 ; 4.910 ; 4.910 ; 4.910 ;
+; lig4       ; sortie[0]   ; 5.141 ; 5.141 ; 5.141 ; 5.141 ;
+; lig4       ; sortie[1]   ; 4.620 ; 4.620 ; 4.620 ; 4.620 ;
+; lig4       ; sortie[2]   ; 5.282 ; 5.282 ; 5.282 ; 5.282 ;
+; lig4       ; sortie[3]   ; 5.158 ; 5.158 ; 5.158 ; 5.158 ;
+; lig4       ; sortie[4]   ; 5.308 ; 5.308 ; 5.308 ; 5.308 ;
+; lig4       ; sortie[5]   ; 5.264 ; 5.264 ; 5.264 ; 5.264 ;
+; lig4       ; sortie[6]   ; 4.810 ; 4.810 ; 4.810 ; 4.810 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; col1       ; LedR        ; 3.861 ; 3.861 ; 3.861 ; 3.861 ;
+; col1       ; LedV        ; 4.024 ; 4.024 ; 4.024 ; 4.024 ;
+; col1       ; sortie[0]   ; 4.248 ; 4.248 ; 4.248 ; 4.248 ;
+; col1       ; sortie[1]   ; 3.728 ; 3.728 ; 3.728 ; 3.728 ;
+; col1       ; sortie[2]   ; 4.372 ; 4.372 ; 4.372 ; 4.372 ;
+; col1       ; sortie[3]   ; 4.269 ; 4.269 ; 4.269 ; 4.269 ;
+; col1       ; sortie[4]   ; 4.412 ; 4.412 ; 4.412 ; 4.412 ;
+; col1       ; sortie[5]   ; 4.366 ; 4.366 ; 4.366 ; 4.366 ;
+; col1       ; sortie[6]   ; 3.921 ; 3.921 ; 3.921 ; 3.921 ;
+; col2       ; LedR        ; 4.720 ; 4.393 ; 4.393 ; 4.720 ;
+; col2       ; LedV        ; 4.556 ; 4.883 ; 4.883 ; 4.556 ;
+; col2       ; sortie[0]   ; 4.787 ; 4.787 ; 4.787 ; 4.787 ;
+; col2       ; sortie[1]   ; 4.266 ; 4.266 ; 4.266 ; 4.266 ;
+; col2       ; sortie[2]   ; 5.231 ; 4.931 ; 4.931 ; 5.231 ;
+; col2       ; sortie[3]   ; 4.804 ; 4.804 ; 4.804 ; 4.804 ;
+; col2       ; sortie[4]   ; 4.955 ; 5.271 ; 5.271 ; 4.955 ;
+; col2       ; sortie[5]   ; 4.911 ; 4.911 ; 4.911 ; 4.911 ;
+; col2       ; sortie[6]   ; 4.456 ; 4.456 ; 4.456 ; 4.456 ;
+; col3       ; LedR        ; 4.520 ; 4.480 ; 4.480 ; 4.520 ;
+; col3       ; LedV        ; 4.643 ; 4.683 ; 4.683 ; 4.643 ;
+; col3       ; sortie[0]   ; 4.874 ; 4.874 ; 4.874 ; 4.874 ;
+; col3       ; sortie[1]   ; 4.353 ; 4.353 ; 4.353 ; 4.353 ;
+; col3       ; sortie[2]   ; 5.006 ; 5.006 ; 5.006 ; 5.006 ;
+; col3       ; sortie[3]   ; 4.891 ; 4.891 ; 4.891 ; 4.891 ;
+; col3       ; sortie[4]   ; 5.041 ; 5.044 ; 5.044 ; 5.041 ;
+; col3       ; sortie[5]   ; 4.997 ; 4.997 ; 4.997 ; 4.997 ;
+; col3       ; sortie[6]   ; 4.543 ; 4.543 ; 4.543 ; 4.543 ;
+; col4       ; LedR        ; 4.441 ; 4.428 ; 4.428 ; 4.441 ;
+; col4       ; LedV        ; 4.591 ; 4.604 ; 4.604 ; 4.591 ;
+; col4       ; sortie[0]   ; 4.789 ; 4.789 ; 4.789 ; 4.789 ;
+; col4       ; sortie[1]   ; 4.268 ; 4.308 ; 4.308 ; 4.268 ;
+; col4       ; sortie[2]   ; 4.914 ; 4.914 ; 4.914 ; 4.914 ;
+; col4       ; sortie[3]   ; 4.809 ; 4.809 ; 4.809 ; 4.809 ;
+; col4       ; sortie[4]   ; 4.952 ; 4.952 ; 4.952 ; 4.952 ;
+; col4       ; sortie[5]   ; 4.905 ; 4.905 ; 4.905 ; 4.905 ;
+; col4       ; sortie[6]   ; 4.461 ; 4.461 ; 4.461 ; 4.461 ;
+; lig1       ; LedR        ; 4.855 ; 4.835 ; 4.835 ; 4.855 ;
+; lig1       ; LedV        ; 4.998 ; 5.018 ; 5.018 ; 4.998 ;
+; lig1       ; sortie[0]   ; 5.229 ; 5.229 ; 5.229 ; 5.229 ;
+; lig1       ; sortie[1]   ; 4.708 ; 4.708 ; 4.708 ; 4.708 ;
+; lig1       ; sortie[2]   ; 5.366 ; 5.366 ; 5.366 ; 5.366 ;
+; lig1       ; sortie[3]   ; 5.246 ; 5.246 ; 5.246 ; 5.246 ;
+; lig1       ; sortie[4]   ; 5.397 ; 5.406 ; 5.406 ; 5.397 ;
+; lig1       ; sortie[5]   ; 5.353 ; 5.353 ; 5.353 ; 5.353 ;
+; lig1       ; sortie[6]   ; 4.898 ; 4.898 ; 4.898 ; 4.898 ;
+; lig2       ; LedR        ; 4.265 ; 4.201 ; 4.201 ; 4.265 ;
+; lig2       ; LedV        ; 4.364 ; 4.428 ; 4.428 ; 4.364 ;
+; lig2       ; sortie[0]   ; 4.595 ; 4.595 ; 4.595 ; 4.595 ;
+; lig2       ; sortie[1]   ; 4.074 ; 4.074 ; 4.074 ; 4.074 ;
+; lig2       ; sortie[2]   ; 4.776 ; 4.739 ; 4.739 ; 4.776 ;
+; lig2       ; sortie[3]   ; 4.612 ; 4.612 ; 4.612 ; 4.612 ;
+; lig2       ; sortie[4]   ; 4.763 ; 4.816 ; 4.816 ; 4.763 ;
+; lig2       ; sortie[5]   ; 4.719 ; 4.719 ; 4.719 ; 4.719 ;
+; lig2       ; sortie[6]   ; 4.264 ; 4.264 ; 4.264 ; 4.264 ;
+; lig3       ; LedR        ; 4.180 ; 4.180 ; 4.180 ; 4.180 ;
+; lig3       ; LedV        ; 4.343 ; 4.343 ; 4.343 ; 4.343 ;
+; lig3       ; sortie[0]   ; 4.567 ; 4.567 ; 4.567 ; 4.567 ;
+; lig3       ; sortie[1]   ; 4.047 ; 4.047 ; 4.047 ; 4.047 ;
+; lig3       ; sortie[2]   ; 4.691 ; 4.691 ; 4.691 ; 4.691 ;
+; lig3       ; sortie[3]   ; 4.588 ; 4.588 ; 4.588 ; 4.588 ;
+; lig3       ; sortie[4]   ; 4.731 ; 4.731 ; 4.731 ; 4.731 ;
+; lig3       ; sortie[5]   ; 4.685 ; 4.685 ; 4.685 ; 4.685 ;
+; lig3       ; sortie[6]   ; 4.240 ; 4.240 ; 4.240 ; 4.240 ;
+; lig4       ; LedR        ; 4.229 ; 4.205 ; 4.205 ; 4.229 ;
+; lig4       ; LedV        ; 4.368 ; 4.392 ; 4.392 ; 4.368 ;
+; lig4       ; sortie[0]   ; 4.599 ; 4.599 ; 4.599 ; 4.599 ;
+; lig4       ; sortie[1]   ; 4.078 ; 4.078 ; 4.078 ; 4.078 ;
+; lig4       ; sortie[2]   ; 4.740 ; 4.740 ; 4.740 ; 4.740 ;
+; lig4       ; sortie[3]   ; 4.616 ; 4.616 ; 4.616 ; 4.616 ;
+; lig4       ; sortie[4]   ; 4.767 ; 4.780 ; 4.780 ; 4.767 ;
+; lig4       ; sortie[5]   ; 4.723 ; 4.723 ; 4.723 ; 4.723 ;
+; lig4       ; sortie[6]   ; 4.268 ; 4.268 ; 4.268 ; 4.268 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; col1       ; LedR        ; 11.029 ; 11.029 ; 11.029 ; 11.029 ;
+; col1       ; LedV        ; 11.409 ; 11.409 ; 11.409 ; 11.409 ;
+; col1       ; sortie[0]   ; 12.021 ; 12.021 ; 12.021 ; 12.021 ;
+; col1       ; sortie[1]   ; 10.401 ; 10.401 ; 10.401 ; 10.401 ;
+; col1       ; sortie[2]   ; 11.963 ; 11.963 ; 11.963 ; 11.963 ;
+; col1       ; sortie[3]   ; 12.032 ; 12.032 ; 12.032 ; 12.032 ;
+; col1       ; sortie[4]   ; 12.377 ; 12.377 ; 12.377 ; 12.377 ;
+; col1       ; sortie[5]   ; 12.242 ; 12.242 ; 12.242 ; 12.242 ;
+; col1       ; sortie[6]   ; 10.833 ; 10.833 ; 10.833 ; 10.833 ;
+; col2       ; LedR        ; 11.981 ; 12.054 ; 12.054 ; 11.981 ;
+; col2       ; LedV        ; 12.434 ; 12.361 ; 12.361 ; 12.434 ;
+; col2       ; sortie[0]   ; 13.120 ; 13.120 ; 13.120 ; 13.120 ;
+; col2       ; sortie[1]   ; 11.536 ; 11.536 ; 11.536 ; 11.536 ;
+; col2       ; sortie[2]   ; 13.110 ; 13.110 ; 13.110 ; 13.110 ;
+; col2       ; sortie[3]   ; 13.164 ; 13.164 ; 13.164 ; 13.164 ;
+; col2       ; sortie[4]   ; 13.472 ; 13.402 ; 13.402 ; 13.472 ;
+; col2       ; sortie[5]   ; 13.349 ; 13.349 ; 13.349 ; 13.349 ;
+; col2       ; sortie[6]   ; 11.965 ; 11.965 ; 11.965 ; 11.965 ;
+; col3       ; LedR        ; 12.216 ; 11.794 ; 11.794 ; 12.216 ;
+; col3       ; LedV        ; 12.174 ; 12.596 ; 12.596 ; 12.174 ;
+; col3       ; sortie[0]   ; 13.208 ; 13.208 ; 13.208 ; 13.208 ;
+; col3       ; sortie[1]   ; 11.268 ; 11.588 ; 11.588 ; 11.268 ;
+; col3       ; sortie[2]   ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; col3       ; sortie[3]   ; 13.219 ; 13.219 ; 13.219 ; 13.219 ;
+; col3       ; sortie[4]   ; 13.564 ; 13.564 ; 13.564 ; 13.564 ;
+; col3       ; sortie[5]   ; 13.429 ; 13.429 ; 13.429 ; 13.429 ;
+; col3       ; sortie[6]   ; 12.020 ; 12.020 ; 12.020 ; 12.020 ;
+; col4       ; LedR        ; 12.409 ; 12.409 ; 12.409 ; 12.409 ;
+; col4       ; LedV        ; 12.789 ; 12.789 ; 12.789 ; 12.789 ;
+; col4       ; sortie[0]   ; 13.463 ; 13.463 ; 13.463 ; 13.463 ;
+; col4       ; sortie[1]   ; 11.883 ; 11.883 ; 11.883 ; 11.883 ;
+; col4       ; sortie[2]   ; 13.456 ; 13.456 ; 13.456 ; 13.456 ;
+; col4       ; sortie[3]   ; 13.508 ; 13.508 ; 13.508 ; 13.508 ;
+; col4       ; sortie[4]   ; 13.830 ; 13.830 ; 13.830 ; 13.830 ;
+; col4       ; sortie[5]   ; 13.728 ; 13.728 ; 13.728 ; 13.728 ;
+; col4       ; sortie[6]   ; 12.313 ; 12.313 ; 12.313 ; 12.313 ;
+; lig1       ; LedR        ; 12.451 ; 12.451 ; 12.451 ; 12.451 ;
+; lig1       ; LedV        ; 12.831 ; 12.831 ; 12.831 ; 12.831 ;
+; lig1       ; sortie[0]   ; 13.517 ; 13.517 ; 13.517 ; 13.517 ;
+; lig1       ; sortie[1]   ; 11.933 ; 11.933 ; 11.933 ; 11.933 ;
+; lig1       ; sortie[2]   ; 13.507 ; 13.507 ; 13.507 ; 13.507 ;
+; lig1       ; sortie[3]   ; 13.561 ; 13.561 ; 13.561 ; 13.561 ;
+; lig1       ; sortie[4]   ; 13.869 ; 13.869 ; 13.869 ; 13.869 ;
+; lig1       ; sortie[5]   ; 13.746 ; 13.746 ; 13.746 ; 13.746 ;
+; lig1       ; sortie[6]   ; 12.362 ; 12.362 ; 12.362 ; 12.362 ;
+; lig2       ; LedR        ; 10.948 ; 11.026 ; 11.026 ; 10.948 ;
+; lig2       ; LedV        ; 11.406 ; 11.328 ; 11.328 ; 11.406 ;
+; lig2       ; sortie[0]   ; 12.080 ; 12.080 ; 12.080 ; 12.080 ;
+; lig2       ; sortie[1]   ; 10.500 ; 10.500 ; 10.500 ; 10.500 ;
+; lig2       ; sortie[2]   ; 11.911 ; 12.073 ; 12.073 ; 11.911 ;
+; lig2       ; sortie[3]   ; 12.125 ; 12.125 ; 12.125 ; 12.125 ;
+; lig2       ; sortie[4]   ; 12.447 ; 12.296 ; 12.296 ; 12.447 ;
+; lig2       ; sortie[5]   ; 12.345 ; 12.345 ; 12.345 ; 12.345 ;
+; lig2       ; sortie[6]   ; 10.930 ; 10.930 ; 10.930 ; 10.930 ;
+; lig3       ; LedR        ; 11.294 ; 11.294 ; 11.294 ; 11.294 ;
+; lig3       ; LedV        ; 11.674 ; 11.674 ; 11.674 ; 11.674 ;
+; lig3       ; sortie[0]   ; 12.286 ; 12.286 ; 12.286 ; 12.286 ;
+; lig3       ; sortie[1]   ; 10.682 ; 10.682 ; 10.682 ; 10.682 ;
+; lig3       ; sortie[2]   ; 12.256 ; 12.256 ; 12.256 ; 12.256 ;
+; lig3       ; sortie[3]   ; 12.310 ; 12.310 ; 12.310 ; 12.310 ;
+; lig3       ; sortie[4]   ; 12.642 ; 12.642 ; 12.642 ; 12.642 ;
+; lig3       ; sortie[5]   ; 12.507 ; 12.507 ; 12.507 ; 12.507 ;
+; lig3       ; sortie[6]   ; 11.111 ; 11.111 ; 11.111 ; 11.111 ;
+; lig4       ; LedR        ; 11.195 ; 11.195 ; 11.195 ; 11.195 ;
+; lig4       ; LedV        ; 11.575 ; 11.575 ; 11.575 ; 11.575 ;
+; lig4       ; sortie[0]   ; 12.261 ; 12.261 ; 12.261 ; 12.261 ;
+; lig4       ; sortie[1]   ; 10.677 ; 10.677 ; 10.677 ; 10.677 ;
+; lig4       ; sortie[2]   ; 12.251 ; 12.251 ; 12.251 ; 12.251 ;
+; lig4       ; sortie[3]   ; 12.305 ; 12.305 ; 12.305 ; 12.305 ;
+; lig4       ; sortie[4]   ; 12.613 ; 12.613 ; 12.613 ; 12.613 ;
+; lig4       ; sortie[5]   ; 12.490 ; 12.490 ; 12.490 ; 12.490 ;
+; lig4       ; sortie[6]   ; 11.106 ; 11.106 ; 11.106 ; 11.106 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; col1       ; LedR        ; 3.861 ; 3.861 ; 3.861 ; 3.861 ;
+; col1       ; LedV        ; 4.024 ; 4.024 ; 4.024 ; 4.024 ;
+; col1       ; sortie[0]   ; 4.248 ; 4.248 ; 4.248 ; 4.248 ;
+; col1       ; sortie[1]   ; 3.728 ; 3.728 ; 3.728 ; 3.728 ;
+; col1       ; sortie[2]   ; 4.372 ; 4.372 ; 4.372 ; 4.372 ;
+; col1       ; sortie[3]   ; 4.269 ; 4.269 ; 4.269 ; 4.269 ;
+; col1       ; sortie[4]   ; 4.412 ; 4.412 ; 4.412 ; 4.412 ;
+; col1       ; sortie[5]   ; 4.366 ; 4.366 ; 4.366 ; 4.366 ;
+; col1       ; sortie[6]   ; 3.921 ; 3.921 ; 3.921 ; 3.921 ;
+; col2       ; LedR        ; 4.720 ; 4.393 ; 4.393 ; 4.720 ;
+; col2       ; LedV        ; 4.556 ; 4.883 ; 4.883 ; 4.556 ;
+; col2       ; sortie[0]   ; 4.787 ; 4.787 ; 4.787 ; 4.787 ;
+; col2       ; sortie[1]   ; 4.266 ; 4.266 ; 4.266 ; 4.266 ;
+; col2       ; sortie[2]   ; 5.231 ; 4.931 ; 4.931 ; 5.231 ;
+; col2       ; sortie[3]   ; 4.804 ; 4.804 ; 4.804 ; 4.804 ;
+; col2       ; sortie[4]   ; 4.955 ; 5.271 ; 5.271 ; 4.955 ;
+; col2       ; sortie[5]   ; 4.911 ; 4.911 ; 4.911 ; 4.911 ;
+; col2       ; sortie[6]   ; 4.456 ; 4.456 ; 4.456 ; 4.456 ;
+; col3       ; LedR        ; 4.520 ; 4.480 ; 4.480 ; 4.520 ;
+; col3       ; LedV        ; 4.643 ; 4.683 ; 4.683 ; 4.643 ;
+; col3       ; sortie[0]   ; 4.874 ; 4.874 ; 4.874 ; 4.874 ;
+; col3       ; sortie[1]   ; 4.353 ; 4.353 ; 4.353 ; 4.353 ;
+; col3       ; sortie[2]   ; 5.006 ; 5.006 ; 5.006 ; 5.006 ;
+; col3       ; sortie[3]   ; 4.891 ; 4.891 ; 4.891 ; 4.891 ;
+; col3       ; sortie[4]   ; 5.041 ; 5.044 ; 5.044 ; 5.041 ;
+; col3       ; sortie[5]   ; 4.997 ; 4.997 ; 4.997 ; 4.997 ;
+; col3       ; sortie[6]   ; 4.543 ; 4.543 ; 4.543 ; 4.543 ;
+; col4       ; LedR        ; 4.441 ; 4.428 ; 4.428 ; 4.441 ;
+; col4       ; LedV        ; 4.591 ; 4.604 ; 4.604 ; 4.591 ;
+; col4       ; sortie[0]   ; 4.789 ; 4.789 ; 4.789 ; 4.789 ;
+; col4       ; sortie[1]   ; 4.268 ; 4.308 ; 4.308 ; 4.268 ;
+; col4       ; sortie[2]   ; 4.914 ; 4.914 ; 4.914 ; 4.914 ;
+; col4       ; sortie[3]   ; 4.809 ; 4.809 ; 4.809 ; 4.809 ;
+; col4       ; sortie[4]   ; 4.952 ; 4.952 ; 4.952 ; 4.952 ;
+; col4       ; sortie[5]   ; 4.905 ; 4.905 ; 4.905 ; 4.905 ;
+; col4       ; sortie[6]   ; 4.461 ; 4.461 ; 4.461 ; 4.461 ;
+; lig1       ; LedR        ; 4.855 ; 4.835 ; 4.835 ; 4.855 ;
+; lig1       ; LedV        ; 4.998 ; 5.018 ; 5.018 ; 4.998 ;
+; lig1       ; sortie[0]   ; 5.229 ; 5.229 ; 5.229 ; 5.229 ;
+; lig1       ; sortie[1]   ; 4.708 ; 4.708 ; 4.708 ; 4.708 ;
+; lig1       ; sortie[2]   ; 5.366 ; 5.366 ; 5.366 ; 5.366 ;
+; lig1       ; sortie[3]   ; 5.246 ; 5.246 ; 5.246 ; 5.246 ;
+; lig1       ; sortie[4]   ; 5.397 ; 5.406 ; 5.406 ; 5.397 ;
+; lig1       ; sortie[5]   ; 5.353 ; 5.353 ; 5.353 ; 5.353 ;
+; lig1       ; sortie[6]   ; 4.898 ; 4.898 ; 4.898 ; 4.898 ;
+; lig2       ; LedR        ; 4.265 ; 4.201 ; 4.201 ; 4.265 ;
+; lig2       ; LedV        ; 4.364 ; 4.428 ; 4.428 ; 4.364 ;
+; lig2       ; sortie[0]   ; 4.595 ; 4.595 ; 4.595 ; 4.595 ;
+; lig2       ; sortie[1]   ; 4.074 ; 4.074 ; 4.074 ; 4.074 ;
+; lig2       ; sortie[2]   ; 4.776 ; 4.739 ; 4.739 ; 4.776 ;
+; lig2       ; sortie[3]   ; 4.612 ; 4.612 ; 4.612 ; 4.612 ;
+; lig2       ; sortie[4]   ; 4.763 ; 4.816 ; 4.816 ; 4.763 ;
+; lig2       ; sortie[5]   ; 4.719 ; 4.719 ; 4.719 ; 4.719 ;
+; lig2       ; sortie[6]   ; 4.264 ; 4.264 ; 4.264 ; 4.264 ;
+; lig3       ; LedR        ; 4.180 ; 4.180 ; 4.180 ; 4.180 ;
+; lig3       ; LedV        ; 4.343 ; 4.343 ; 4.343 ; 4.343 ;
+; lig3       ; sortie[0]   ; 4.567 ; 4.567 ; 4.567 ; 4.567 ;
+; lig3       ; sortie[1]   ; 4.047 ; 4.047 ; 4.047 ; 4.047 ;
+; lig3       ; sortie[2]   ; 4.691 ; 4.691 ; 4.691 ; 4.691 ;
+; lig3       ; sortie[3]   ; 4.588 ; 4.588 ; 4.588 ; 4.588 ;
+; lig3       ; sortie[4]   ; 4.731 ; 4.731 ; 4.731 ; 4.731 ;
+; lig3       ; sortie[5]   ; 4.685 ; 4.685 ; 4.685 ; 4.685 ;
+; lig3       ; sortie[6]   ; 4.240 ; 4.240 ; 4.240 ; 4.240 ;
+; lig4       ; LedR        ; 4.229 ; 4.205 ; 4.205 ; 4.229 ;
+; lig4       ; LedV        ; 4.368 ; 4.392 ; 4.392 ; 4.368 ;
+; lig4       ; sortie[0]   ; 4.599 ; 4.599 ; 4.599 ; 4.599 ;
+; lig4       ; sortie[1]   ; 4.078 ; 4.078 ; 4.078 ; 4.078 ;
+; lig4       ; sortie[2]   ; 4.740 ; 4.740 ; 4.740 ; 4.740 ;
+; lig4       ; sortie[3]   ; 4.616 ; 4.616 ; 4.616 ; 4.616 ;
+; lig4       ; sortie[4]   ; 4.767 ; 4.780 ; 4.780 ; 4.767 ;
+; lig4       ; sortie[5]   ; 4.723 ; 4.723 ; 4.723 ; 4.723 ;
+; lig4       ; sortie[6]   ; 4.268 ; 4.268 ; 4.268 ; 4.268 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 72    ; 72   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 72    ; 72   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jan 20 09:11:50 2021
+Info: Command: quartus_sta serrure -c serrure
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'serrure.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4536 megabytes
+    Info: Processing ended: Wed Jan 20 09:11:52 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
